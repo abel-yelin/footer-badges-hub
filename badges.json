@@ -101,12 +101,16 @@
       {
         "href": "https://fazier.com/launches/www.mp3tourl.com",
         "alt": "mp3tourl on Fazier",
-        "label": "mp3tourl on Fazier"
+        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+        "width": 120,
+        "height": 54
       },
       {
         "href": "https://findly.tools/mp3tourl?utm_source=mp3tourl",
         "alt": "mp3tourl on Findly Tools",
-        "label": "mp3tourl on Findly Tools"
+        "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+        "width": 175,
+        "height": 55
       },
       {
         "href": "https://indie.deals?ref=https%3A%2F%2Fwww.mp3tourl.com%2F",
@@ -116,12 +120,16 @@
       {
         "href": "https://startupfa.me/s/mp3tourl?utm_source=www.mp3tourl.com",
         "alt": "mp3tourl on Startup Fame",
-        "label": "mp3tourl on Startup Fame"
+        "src": "https://startupfa.me/badges/featured-badge.webp",
+        "width": 171,
+        "height": 54
       },
       {
         "href": "https://twelve.tools",
         "alt": "mp3tourl on Twelve Tools",
-        "label": "mp3tourl on Twelve Tools"
+        "src": "https://twelve.tools/badge0-dark.svg",
+        "width": 200,
+        "height": 54
       },
       {
         "href": "https://goodaitools.com",
@@ -151,7 +159,9 @@
       {
         "href": "https://turbo0.com/item/mp3tourl",
         "alt": "mp3tourl on Turbo0",
-        "label": "mp3tourl on Turbo0"
+        "src": "https://img.turbo0.com/badge-listed-light.svg",
+        "width": 175,
+        "height": 54
       },
       {
         "href": "https://launchigniter.com/product/mp3tourl?ref=badge-mp3tourl",
@@ -161,7 +171,9 @@
       {
         "href": "https://dofollow.tools",
         "alt": "mp3tourl on Dofollow.Tools",
-        "label": "mp3tourl on Dofollow.Tools"
+        "src": "https://dofollow.tools/badge/badge_dark.svg",
+        "width": 200,
+        "height": 54
       },
       {
         "href": "https://verifieddr.com/website/www-mp3tourl-com",
