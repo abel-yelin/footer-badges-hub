@@ -1,0 +1,22 @@
+{
+  "sites": [
+    {
+      "name": "stampmaker",
+      "enabled": true,
+      "revalidateUrl": "https://www.stampmaker.io/api/revalidate-footer-badges",
+      "tokenKey": "stampmaker"
+    },
+    {
+      "name": "mp3tourl",
+      "enabled": true,
+      "revalidateUrl": "https://www.mp3tourl.com/api/revalidate-footer-badges",
+      "tokenKey": "mp3tourl"
+    },
+    {
+      "name": "videotourl",
+      "enabled": true,
+      "revalidateUrl": "https://www.videotourl.com/api/revalidate-footer-badges",
+      "tokenKey": "videotourl"
+    }
+  ]
+}

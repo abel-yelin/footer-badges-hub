@@ -1,0 +1,16 @@
+{
+  "name": "footer-badges-hub",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abel-yelin/footer-badges-hub.git"
+  },
+  "homepage": "https://abel-yelin.github.io/footer-badges-hub/",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node scripts/notify-sites.mjs"
+  }
+}

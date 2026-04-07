@@ -1,0 +1,66 @@
+name: Publish Footer Badges
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'badges.json'
+      - '.github/workflows/publish-badges.yml'
+      - '.github/workflows/revalidate-sites.yml'
+      - 'scripts/notify-sites.mjs'
+      - 'site-targets.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: footer-badges-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare Pages artifact
+        shell: bash
+        run: |
+          mkdir -p .pages
+          cp badges.json .pages/badges.json
+          touch .pages/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  notify-sites:
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      SITE_REVALIDATE_TOKENS_JSON: ${{ secrets.SITE_REVALIDATE_TOKENS_JSON }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Notify subscribed sites
+        run: node scripts/notify-sites.mjs

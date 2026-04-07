@@ -1,0 +1,22 @@
+name: Revalidate Footer Badge Consumers
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify-sites:
+    runs-on: ubuntu-latest
+    env:
+      SITE_REVALIDATE_TOKENS_JSON: ${{ secrets.SITE_REVALIDATE_TOKENS_JSON }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Notify subscribed sites
+        run: node scripts/notify-sites.mjs
