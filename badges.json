@@ -97,7 +97,83 @@
         "height": 54
       }
     ],
-    "mp3tourl": [],
+    "mp3tourl": [
+      {
+        "href": "https://fazier.com/launches/www.mp3tourl.com",
+        "alt": "mp3tourl on Fazier",
+        "label": "mp3tourl on Fazier"
+      },
+      {
+        "href": "https://findly.tools/mp3tourl?utm_source=mp3tourl",
+        "alt": "mp3tourl on Findly Tools",
+        "label": "mp3tourl on Findly Tools"
+      },
+      {
+        "href": "https://indie.deals?ref=https%3A%2F%2Fwww.mp3tourl.com%2F",
+        "alt": "mp3tourl on Indie.Deals",
+        "label": "mp3tourl on Indie.Deals"
+      },
+      {
+        "href": "https://startupfa.me/s/mp3tourl?utm_source=www.mp3tourl.com",
+        "alt": "mp3tourl on Startup Fame",
+        "label": "mp3tourl on Startup Fame"
+      },
+      {
+        "href": "https://twelve.tools",
+        "alt": "mp3tourl on Twelve Tools",
+        "label": "mp3tourl on Twelve Tools"
+      },
+      {
+        "href": "https://goodaitools.com",
+        "alt": "mp3tourl on Good AI Tools",
+        "label": "mp3tourl on Good AI Tools"
+      },
+      {
+        "href": "https://showmebest.ai",
+        "alt": "mp3tourl on ShowMeBestAI",
+        "label": "mp3tourl on ShowMeBestAI"
+      },
+      {
+        "href": "https://www.ontoplist.com/software-blogs/",
+        "alt": "mp3tourl on OnTopList",
+        "label": "mp3tourl on OnTopList"
+      },
+      {
+        "href": "https://aidirs.org/item/mp3tourl",
+        "alt": "mp3tourl on AIDirs",
+        "label": "mp3tourl on AIDirs"
+      },
+      {
+        "href": "https://submito.net",
+        "alt": "mp3tourl on Submito",
+        "label": "mp3tourl on Submito"
+      },
+      {
+        "href": "https://turbo0.com/item/mp3tourl",
+        "alt": "mp3tourl on Turbo0",
+        "label": "mp3tourl on Turbo0"
+      },
+      {
+        "href": "https://launchigniter.com/product/mp3tourl?ref=badge-mp3tourl",
+        "alt": "mp3tourl on LaunchIgniter",
+        "label": "mp3tourl on LaunchIgniter"
+      },
+      {
+        "href": "https://dofollow.tools",
+        "alt": "mp3tourl on Dofollow.Tools",
+        "label": "mp3tourl on Dofollow.Tools"
+      },
+      {
+        "href": "https://verifieddr.com/website/www-mp3tourl-com",
+        "alt": "mp3tourl on Verified DR",
+        "label": "mp3tourl on Verified DR"
+      },
+      {
+        "href": "https://submitaitools.org",
+        "alt": "mp3tourl on Submit AI Tools",
+        "label": "mp3tourl on Submit AI Tools"
+      }
+    ],
     "videotourl": []
   }
 }
