@@ -8,7 +8,10 @@ It publishes `badges.json` to GitHub Pages and can notify all subscribed sites
 
 ## Files
 
-- `badges.json`: the shared badge config consumed by all sites
+- `data/badge-providers.json`: reusable badge provider templates
+- `data/site-projects.json`: per-site variables and enabled provider list
+- `scripts/build-badges.mjs`: generates the final `badges.json`
+- `badges.json`: generated output consumed by all sites
 - `site-targets.json`: the list of sites to notify after config changes
 - `scripts/notify-sites.mjs`: posts revalidate requests to all configured sites
 - `.github/workflows/publish-badges.yml`: publishes `badges.json` to GitHub Pages
@@ -56,11 +59,13 @@ Authorization: Bearer <FOOTER_BADGES_REVALIDATE_TOKEN>
 
 ## Update flow
 
-1. Edit `badges.json`
-2. Push to `main`
-3. GitHub Pages republishes `badges.json`
-4. The workflow notifies all configured sites
-5. Each site revalidates the `footer-badges` cache tag immediately
+1. Edit `data/badge-providers.json` or `data/site-projects.json`
+2. Run `npm run build:badges` if you want to preview the generated output locally
+3. Push to `main`
+4. GitHub Actions regenerates `badges.json`
+5. GitHub Pages republishes `badges.json`
+6. The workflow notifies all configured sites
+7. Each site revalidates the `footer-badges` cache tag immediately
 
 Without notification, sites still update automatically after their configured
 runtime cache TTL expires.

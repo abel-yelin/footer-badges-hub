@@ -5,8 +5,11 @@ on:
     branches: ['main']
     paths:
       - 'badges.json'
+      - 'data/badge-providers.json'
+      - 'data/site-projects.json'
       - '.github/workflows/publish-badges.yml'
       - '.github/workflows/revalidate-sites.yml'
+      - 'scripts/build-badges.mjs'
       - 'scripts/notify-sites.mjs'
       - 'site-targets.json'
   workflow_dispatch:
@@ -27,6 +30,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build badges.json
+        run: node scripts/build-badges.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

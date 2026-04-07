@@ -11,6 +11,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "node scripts/notify-sites.mjs"
+    "build:badges": "node scripts/build-badges.mjs",
+    "check": "node scripts/build-badges.mjs && node scripts/notify-sites.mjs"
   }
 }

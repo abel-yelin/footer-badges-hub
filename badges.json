@@ -58,7 +58,7 @@
       },
       {
         "href": "https://startupfa.me/s/stampmaker.io-195?utm_source=www.stampmaker.io",
-        "alt": "stampmaker.io - Featured on Startup Fame",
+        "alt": "www.stampmaker.io - Featured on Startup Fame",
         "src": "https://startupfa.me/badges/featured-badge.webp",
         "width": 171,
         "height": 54
@@ -79,14 +79,16 @@
       },
       {
         "href": "https://fazier.com/launches/www.stampmaker.io",
-        "alt": "Fazier badge",
+        "alt": "stampmaker on Fazier",
         "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
-        "width": 120
+        "width": 120,
+        "height": 54
       },
       {
         "href": "https://saasfame.com/item/stamp-maker",
         "alt": "Featured on saasfame.com",
         "src": "https://saasfame.com/badge-light.svg",
+        "width": 170,
         "height": 54
       },
       {
@@ -107,7 +109,7 @@
       },
       {
         "href": "https://findly.tools/mp3tourl?utm_source=mp3tourl",
-        "alt": "mp3tourl on Findly Tools",
+        "alt": "Featured on Findly.tools",
         "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
         "width": 175,
         "height": 55
@@ -119,14 +121,14 @@
       },
       {
         "href": "https://startupfa.me/s/mp3tourl?utm_source=www.mp3tourl.com",
-        "alt": "mp3tourl on Startup Fame",
+        "alt": "www.mp3tourl.com - Featured on Startup Fame",
         "src": "https://startupfa.me/badges/featured-badge.webp",
         "width": 171,
         "height": 54
       },
       {
         "href": "https://twelve.tools",
-        "alt": "mp3tourl on Twelve Tools",
+        "alt": "Featured on Twelve Tools",
         "src": "https://twelve.tools/badge0-dark.svg",
         "width": 200,
         "height": 54
@@ -158,7 +160,7 @@
       },
       {
         "href": "https://turbo0.com/item/mp3tourl",
-        "alt": "mp3tourl on Turbo0",
+        "alt": "Listed on Turbo0",
         "src": "https://img.turbo0.com/badge-listed-light.svg",
         "width": 175,
         "height": 54
@@ -170,7 +172,7 @@
       },
       {
         "href": "https://dofollow.tools",
-        "alt": "mp3tourl on Dofollow.Tools",
+        "alt": "Featured on Dofollow.Tools",
         "src": "https://dofollow.tools/badge/badge_dark.svg",
         "width": 200,
         "height": 54
@@ -186,6 +188,94 @@
         "label": "mp3tourl on Submit AI Tools"
       }
     ],
-    "videotourl": []
+    "videotourl": [
+      {
+        "href": "https://fazier.com/launches/www.videotourl.com",
+        "alt": "videotourl on Fazier",
+        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+        "width": 120,
+        "height": 54
+      },
+      {
+        "href": "https://findly.tools/videotourl?utm_source=videotourl",
+        "alt": "Featured on Findly.tools",
+        "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+        "width": 175,
+        "height": 55
+      },
+      {
+        "href": "https://indie.deals?ref=https%3A%2F%2Fwww.videotourl.com%2F",
+        "alt": "videotourl on Indie.Deals",
+        "label": "videotourl on Indie.Deals"
+      },
+      {
+        "href": "https://startupfa.me/s/videotourl?utm_source=www.videotourl.com",
+        "alt": "www.videotourl.com - Featured on Startup Fame",
+        "src": "https://startupfa.me/badges/featured-badge.webp",
+        "width": 171,
+        "height": 54
+      },
+      {
+        "href": "https://twelve.tools",
+        "alt": "Featured on Twelve Tools",
+        "src": "https://twelve.tools/badge0-dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://goodaitools.com",
+        "alt": "videotourl on Good AI Tools",
+        "label": "videotourl on Good AI Tools"
+      },
+      {
+        "href": "https://showmebest.ai",
+        "alt": "videotourl on ShowMeBestAI",
+        "label": "videotourl on ShowMeBestAI"
+      },
+      {
+        "href": "https://www.ontoplist.com/software-blogs/",
+        "alt": "videotourl on OnTopList",
+        "label": "videotourl on OnTopList"
+      },
+      {
+        "href": "https://aidirs.org/item/videotourl",
+        "alt": "videotourl on AIDirs",
+        "label": "videotourl on AIDirs"
+      },
+      {
+        "href": "https://submito.net",
+        "alt": "videotourl on Submito",
+        "label": "videotourl on Submito"
+      },
+      {
+        "href": "https://turbo0.com/item/videotourl",
+        "alt": "Listed on Turbo0",
+        "src": "https://img.turbo0.com/badge-listed-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://launchigniter.com/product/videotourl?ref=badge-videotourl",
+        "alt": "videotourl on LaunchIgniter",
+        "label": "videotourl on LaunchIgniter"
+      },
+      {
+        "href": "https://dofollow.tools",
+        "alt": "Featured on Dofollow.Tools",
+        "src": "https://dofollow.tools/badge/badge_dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://verifieddr.com/website/www-videotourl-com",
+        "alt": "videotourl on Verified DR",
+        "label": "videotourl on Verified DR"
+      },
+      {
+        "href": "https://submitaitools.org",
+        "alt": "videotourl on Submit AI Tools",
+        "label": "videotourl on Submit AI Tools"
+      }
+    ]
   }
 }

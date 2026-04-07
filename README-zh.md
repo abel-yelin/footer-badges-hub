@@ -8,7 +8,7 @@
 
 你要搭建的是一个“中心配置仓库”，作用如下：
 
-- 统一维护所有网站的 footer badge 配置
+- 统一维护所有网站的 badge 模板和站点变量
 - 把 `badges.json` 发布到 GitHub Pages
 - 各个网站运行时读取这份远程配置
 - 更新 badge 后，通过 GitHub Action 主动通知所有网站刷新缓存
@@ -47,6 +47,8 @@ scaffolds/footer-badges-hub
 
 复制后的仓库根目录里应至少包含这些文件：
 
+- `data/badge-providers.json`
+- `data/site-projects.json`
 - `badges.json`
 - `site-targets.json`
 - `.github/workflows/publish-badges.yml`
@@ -97,64 +99,68 @@ FOOTER_BADGES_CONFIG_URL
 
 ---
 
-## 六、第四步：配置中心 badge 数据
+## 六、第四步：配置 badge 模板和站点变量
 
 编辑中心仓库里的：
 
-- `badges.json`
+- `data/badge-providers.json`
+- `data/site-projects.json`
 
-当前你已经有这些项目键：
+### `badge-providers.json` 作用
 
-- `stampmaker`
-- `mp3tourl`
-- `videotourl`
+- 维护每一个 badge 平台的标准模板
+- 使用占位符变量，例如 `{siteSlug}`、`{listingSlug}`、`{domain}`
+- 一个平台只定义一次，所有网站复用
 
-### 结构说明
-
-`badges.json` 结构如下：
+示例：
 
 ```json
 {
-  "version": 1,
-  "projects": {
-    "stampmaker": [],
-    "mp3tourl": [],
-    "videotourl": []
+  "findly": {
+    "hrefTemplate": "https://findly.tools/{siteSlug}?utm_source={siteSlug}",
+    "alt": "Featured on Findly.tools",
+    "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+    "width": 175,
+    "height": 55
   }
 }
 ```
 
-### badge 的两种写法
+### `site-projects.json` 作用
 
-#### 1. 图片 badge
+- 维护每个网站的变量
+- 决定该网站启用哪些 badge 平台
+- 最终由脚本自动生成单一 `badges.json`
 
-```json
-{
-  "href": "https://example.com",
-  "alt": "Example badge",
-  "src": "https://example.com/badge.svg",
-  "width": 175,
-  "height": 54
-}
-```
-
-#### 2. 文字 badge
+示例：
 
 ```json
 {
-  "href": "https://example.com",
-  "alt": "Listed on Example",
-  "label": "Listed on Example"
+  "stampmaker": {
+    "variables": {
+      "siteSlug": "stampmaker",
+      "listingSlug": "stamp-maker",
+      "domain": "www.stampmaker.io"
+    },
+    "badges": ["findly", "turbo0"]
+  }
 }
 ```
 
-### 你的维护原则
+### 最终维护原则
 
-- `projects.stampmaker` 放 `stampmaker.io` 的 badge
-- `projects.mp3tourl` 放 `mp3tourl.com` 的 badge
-- `projects.videotourl` 放 `videotourl.com` 的 badge
+- badge 平台规则写在 `data/badge-providers.json`
+- 网站变量写在 `data/site-projects.json`
+- 不再手工维护完整 `badges.json`
+- `badges.json` 由脚本自动生成
 
-不要把不同网站的 badge 混在同一个项目键里。
+### 本地生成命令
+
+```txt
+npm run build:badges
+```
+
+执行后会自动生成新的 `badges.json`。
 
 ---
 
@@ -279,7 +285,8 @@ POST /api/revalidate-footer-badges
 
 当你完成了：
 
-- `badges.json`
+- `data/badge-providers.json`
+- `data/site-projects.json`
 - `site-targets.json`
 - `SITE_REVALIDATE_TOKENS_JSON`
 - 各网站环境变量
@@ -295,8 +302,9 @@ GitHub Actions 会自动执行：
 
 它会做两件事：
 
-1. 把 `badges.json` 发布到 GitHub Pages
-2. 自动调用所有站点的 `/api/revalidate-footer-badges`
+1. 先自动生成 `badges.json`
+2. 把 `badges.json` 发布到 GitHub Pages
+3. 自动调用所有站点的 `/api/revalidate-footer-badges`
 
 ---
 
@@ -342,7 +350,7 @@ OK videotourl
 
 以后你只需要做这几步：
 
-1. 修改中心仓库 `badges.json`
+1. 修改中心仓库 `data/badge-providers.json` 或 `data/site-projects.json`
 2. 提交并 push 到 `main`
 3. 等 GitHub Action 自动完成
 4. 检查各站点 footer 是否更新
@@ -359,7 +367,7 @@ OK videotourl
 
 按下面顺序检查：
 
-1. 中心仓库的 `badges.json` 是否已经包含该项目键
+1. 中心仓库的 `data/site-projects.json` 是否已经包含该项目键
 2. 该网站的 `FOOTER_BADGES_PROJECT_ID` 是否正确
 3. 该网站的 `FOOTER_BADGES_CONFIG_URL` 是否正确
 4. 中心仓库的 `site-targets.json` 是否包含该网站

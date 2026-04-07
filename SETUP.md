@@ -35,12 +35,18 @@ Edit `site-targets.json`:
 - `revalidateUrl`: full `POST` endpoint on the target site
 - `tokenKey`: key used to resolve the token from `SITE_REVALIDATE_TOKENS_JSON`
 
-## 5. Configure badge projects
+## 5. Configure badge templates and sites
 
-Edit `badges.json`:
+Edit `data/badge-providers.json`:
+
+- add one provider definition per badge platform
+- use `{variableName}` placeholders inside `hrefTemplate`, `altTemplate`, `labelTemplate`, or `srcTemplate`
+
+Edit `data/site-projects.json`:
 
 - add one key per project under `projects`
-- use the same project key as each site's `FOOTER_BADGES_PROJECT_ID`
+- define shared variables for that project
+- list enabled badge providers in the desired order
 
 ## 6. Configure each consumer site
 
@@ -61,6 +67,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 
 ## 7. Publish
 
+- Optionally run `npm run build:badges` locally to preview the generated file
 - Push to `main`
 - Wait for `Publish Footer Badges` to finish
 - Confirm `badges.json` is reachable from GitHub Pages

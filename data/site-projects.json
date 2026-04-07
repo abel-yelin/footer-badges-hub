@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "projects": {
+    "stampmaker": {
+      "variables": {
+        "siteName": "stampmaker",
+        "siteSlug": "stampmaker",
+        "listingSlug": "stamp-maker",
+        "domain": "www.stampmaker.io",
+        "verifiedDrSlug": "stampmaker-io",
+        "startupFameSlug": "stampmaker.io-195",
+        "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F"
+      },
+      "badges": [
+        "findly",
+        "turbo0",
+        "twelve-tools",
+        "aibesttop",
+        "verifieddr",
+        "lovableapp",
+        "yo-directory",
+        "artificin",
+        "startup-fame",
+        "toolfame",
+        "aitoolfame",
+        "fazier",
+        "saasfame",
+        "dofollow-tools"
+      ]
+    },
+    "mp3tourl": {
+      "variables": {
+        "siteName": "mp3tourl",
+        "siteSlug": "mp3tourl",
+        "listingSlug": "mp3tourl",
+        "domain": "www.mp3tourl.com",
+        "verifiedDrSlug": "www-mp3tourl-com",
+        "startupFameSlug": "mp3tourl",
+        "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F"
+      },
+      "badges": [
+        "fazier",
+        "findly",
+        "indie-deals",
+        "startup-fame",
+        "twelve-tools",
+        "good-ai-tools",
+        "showmebestai",
+        "ontoplist",
+        "aidirs",
+        "submito",
+        "turbo0",
+        "launchigniter",
+        "dofollow-tools",
+        {
+          "provider": "verifieddr",
+          "override": {
+            "alt": "mp3tourl on Verified DR",
+            "label": "mp3tourl on Verified DR",
+            "src": null,
+            "width": null,
+            "height": null
+          }
+        },
+        "submit-ai-tools"
+      ]
+    },
+    "videotourl": {
+      "variables": {
+        "siteName": "videotourl",
+        "siteSlug": "videotourl",
+        "listingSlug": "videotourl",
+        "domain": "www.videotourl.com",
+        "verifiedDrSlug": "www-videotourl-com",
+        "startupFameSlug": "videotourl",
+        "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F"
+      },
+      "badges": [
+        "fazier",
+        "findly",
+        "indie-deals",
+        "startup-fame",
+        "twelve-tools",
+        "good-ai-tools",
+        "showmebestai",
+        "ontoplist",
+        "aidirs",
+        "submito",
+        "turbo0",
+        "launchigniter",
+        "dofollow-tools",
+        {
+          "provider": "verifieddr",
+          "override": {
+            "alt": "videotourl on Verified DR",
+            "label": "videotourl on Verified DR",
+            "src": null,
+            "width": null,
+            "height": null
+          }
+        },
+        "submit-ai-tools"
+      ]
+    }
+  }
+}

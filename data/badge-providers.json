@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "providers": {
+    "findly": {
+      "hrefTemplate": "https://findly.tools/{siteSlug}?utm_source={siteSlug}",
+      "alt": "Featured on Findly.tools",
+      "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+      "width": 175,
+      "height": 55
+    },
+    "turbo0": {
+      "hrefTemplate": "https://turbo0.com/item/{listingSlug}",
+      "alt": "Listed on Turbo0",
+      "src": "https://img.turbo0.com/badge-listed-light.svg",
+      "width": 175,
+      "height": 54
+    },
+    "twelve-tools": {
+      "hrefTemplate": "https://twelve.tools",
+      "alt": "Featured on Twelve Tools",
+      "src": "https://twelve.tools/badge0-dark.svg",
+      "width": 200,
+      "height": 54
+    },
+    "aibesttop": {
+      "hrefTemplate": "https://aibesttop.com",
+      "alt": "Listed on AIBestTop",
+      "label": "Listed on AIBestTop"
+    },
+    "verifieddr": {
+      "hrefTemplate": "https://verifieddr.com/website/{verifiedDrSlug}",
+      "altTemplate": "Verified DR - Verified Domain Rating for {domain}",
+      "srcTemplate": "https://verifieddr.com/badge/{verifiedDrSlug}.svg",
+      "width": 220,
+      "height": 68
+    },
+    "lovableapp": {
+      "hrefTemplate": "https://lovableapp.org",
+      "alt": "Lovable App Badge",
+      "src": "https://lovableapp.org/lovable-app-badge.svg",
+      "width": 165,
+      "height": 32
+    },
+    "yo-directory": {
+      "hrefTemplate": "https://yo.directory/",
+      "alt": "yo.directory",
+      "src": "https://cdn.prod.website-files.com/65c1546fa73ea974db789e3d/65e1e171f89ebfa7bd0129ac_yodirectory-featured.png",
+      "width": 150,
+      "height": 54
+    },
+    "artificin": {
+      "hrefTemplate": "https://artificin.com",
+      "alt": "Featured on Artificin",
+      "src": "https://artificin.com/badges/Artificin-badge.png",
+      "width": 175,
+      "height": 50
+    },
+    "startup-fame": {
+      "hrefTemplate": "https://startupfa.me/s/{startupFameSlug}?utm_source={domain}",
+      "altTemplate": "{domain} - Featured on Startup Fame",
+      "src": "https://startupfa.me/badges/featured-badge.webp",
+      "width": 171,
+      "height": 54
+    },
+    "toolfame": {
+      "hrefTemplate": "https://toolfame.com/item/{listingSlug}",
+      "alt": "Featured on toolfame.com",
+      "src": "https://toolfame.com/badge-light.svg",
+      "width": 175,
+      "height": 54
+    },
+    "aitoolfame": {
+      "hrefTemplate": "https://aitoolfame.com/item/{listingSlug}",
+      "alt": "Featured on aitoolfame.com",
+      "src": "https://aitoolfame.com/badge-light.svg",
+      "width": 175,
+      "height": 54
+    },
+    "fazier": {
+      "hrefTemplate": "https://fazier.com/launches/{domain}",
+      "altTemplate": "{siteName} on Fazier",
+      "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+      "width": 120,
+      "height": 54
+    },
+    "saasfame": {
+      "hrefTemplate": "https://saasfame.com/item/{listingSlug}",
+      "alt": "Featured on saasfame.com",
+      "src": "https://saasfame.com/badge-light.svg",
+      "width": 170,
+      "height": 54
+    },
+    "dofollow-tools": {
+      "hrefTemplate": "https://dofollow.tools",
+      "alt": "Featured on Dofollow.Tools",
+      "src": "https://dofollow.tools/badge/badge_dark.svg",
+      "width": 200,
+      "height": 54
+    },
+    "indie-deals": {
+      "hrefTemplate": "https://indie.deals?ref={siteUrlEncoded}",
+      "altTemplate": "{siteName} on Indie.Deals",
+      "labelTemplate": "{siteName} on Indie.Deals"
+    },
+    "good-ai-tools": {
+      "hrefTemplate": "https://goodaitools.com",
+      "altTemplate": "{siteName} on Good AI Tools",
+      "labelTemplate": "{siteName} on Good AI Tools"
+    },
+    "showmebestai": {
+      "hrefTemplate": "https://showmebest.ai",
+      "altTemplate": "{siteName} on ShowMeBestAI",
+      "labelTemplate": "{siteName} on ShowMeBestAI"
+    },
+    "ontoplist": {
+      "hrefTemplate": "https://www.ontoplist.com/software-blogs/",
+      "altTemplate": "{siteName} on OnTopList",
+      "labelTemplate": "{siteName} on OnTopList"
+    },
+    "aidirs": {
+      "hrefTemplate": "https://aidirs.org/item/{siteSlug}",
+      "altTemplate": "{siteName} on AIDirs",
+      "labelTemplate": "{siteName} on AIDirs"
+    },
+    "submito": {
+      "hrefTemplate": "https://submito.net",
+      "altTemplate": "{siteName} on Submito",
+      "labelTemplate": "{siteName} on Submito"
+    },
+    "launchigniter": {
+      "hrefTemplate": "https://launchigniter.com/product/{siteSlug}?ref=badge-{siteSlug}",
+      "altTemplate": "{siteName} on LaunchIgniter",
+      "labelTemplate": "{siteName} on LaunchIgniter"
+    },
+    "submit-ai-tools": {
+      "hrefTemplate": "https://submitaitools.org",
+      "altTemplate": "{siteName} on Submit AI Tools",
+      "labelTemplate": "{siteName} on Submit AI Tools"
+    }
+  }
+}
