@@ -9,7 +9,9 @@
         "domain": "www.stampmaker.io",
         "verifiedDrSlug": "stampmaker-io",
         "startupFameSlug": "stampmaker.io-195",
-        "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F"
+        "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F",
+        "aiAgentsDirectorySlug": "digital-stamp-maker",
+        "aiAgentsDirectoryAlt": "Digital Stamp Maker - Featured AI Agent on AI Agents Directory"
       },
       "badges": [
         "findly",
@@ -25,7 +27,8 @@
         "aitoolfame",
         "fazier",
         "saasfame",
-        "dofollow-tools"
+        "dofollow-tools",
+        "ai-agents-directory"
       ]
     },
     "mp3tourl": {
