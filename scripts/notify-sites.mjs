@@ -77,27 +77,35 @@ async function main() {
   const tokenMap = normalizeTokenMap();
   const sites = await readTargets();
   const results = await Promise.all(
-    sites.map((site) => notifySite(site, tokenMap))
+    sites.map((site) => notifySite(site, tokenMap)),
   );
 
-  let hasFailure = false;
+  let okCount = 0;
+  let failedCount = 0;
+  let skippedCount = 0;
 
   for (const result of results) {
     if (result.status === 'ok') {
+      okCount += 1;
       console.log(`OK ${result.name}`);
       continue;
     }
 
     if (result.status === 'skipped') {
+      skippedCount += 1;
       console.warn(`SKIPPED ${result.name}: ${result.reason}`);
       continue;
     }
 
-    hasFailure = true;
+    failedCount += 1;
     console.error(`FAILED ${result.name}: ${result.reason}`);
   }
 
-  if (hasFailure) {
+  console.log(
+    `SUMMARY ok=${okCount} failed=${failedCount} skipped=${skippedCount}`,
+  );
+
+  if (okCount === 0 && failedCount > 0) {
     process.exitCode = 1;
   }
 }
