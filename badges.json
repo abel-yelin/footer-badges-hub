@@ -78,6 +78,13 @@
         "height": 54
       },
       {
+        "href": "https://showmebest.ai",
+        "alt": "Featured on ShowMeBestAI",
+        "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+        "width": 220,
+        "height": 60
+      },
+      {
         "href": "https://fazier.com/launches/www.stampmaker.io",
         "alt": "stampmaker on Fazier",
         "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
@@ -147,8 +154,10 @@
       },
       {
         "href": "https://showmebest.ai",
-        "alt": "mp3tourl on ShowMeBestAI",
-        "label": "mp3tourl on ShowMeBestAI"
+        "alt": "Featured on ShowMeBestAI",
+        "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+        "width": 220,
+        "height": 60
       },
       {
         "href": "https://www.ontoplist.com/software-blogs/",
@@ -236,8 +245,10 @@
       },
       {
         "href": "https://showmebest.ai",
-        "alt": "videotourl on ShowMeBestAI",
-        "label": "videotourl on ShowMeBestAI"
+        "alt": "Featured on ShowMeBestAI",
+        "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+        "width": 220,
+        "height": 60
       },
       {
         "href": "https://www.ontoplist.com/software-blogs/",

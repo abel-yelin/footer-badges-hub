@@ -109,8 +109,10 @@
     },
     "showmebestai": {
       "hrefTemplate": "https://showmebest.ai",
-      "altTemplate": "{siteName} on ShowMeBestAI",
-      "labelTemplate": "{siteName} on ShowMeBestAI"
+      "alt": "Featured on ShowMeBestAI",
+      "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+      "width": 220,
+      "height": 60
     },
     "ontoplist": {
       "hrefTemplate": "https://www.ontoplist.com/software-blogs/",
