@@ -10,6 +10,7 @@
         "verifiedDrSlug": "stampmaker-io",
         "startupFameSlug": "stampmaker.io-195",
         "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F",
+        "aidirsSlug": "stamp-maker",
         "aiAgentsDirectorySlug": "digital-stamp-maker",
         "aiAgentsDirectoryAlt": "Digital Stamp Maker - Featured AI Agent on AI Agents Directory"
       },
@@ -28,6 +29,7 @@
         "good-ai-tools",
         "showmebestai",
         "ontoplist",
+        "aidirs",
         "fazier",
         "saasfame",
         "dofollow-tools",
@@ -36,6 +38,7 @@
         "buildway",
         "deeplaunch",
         "startup-fast",
+        "bestsky-tools",
         "ai-agents-directory"
       ]
     },
@@ -47,7 +50,8 @@
         "domain": "www.mp3tourl.com",
         "verifiedDrSlug": "www-mp3tourl-com",
         "startupFameSlug": "mp3tourl",
-        "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F"
+        "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F",
+        "aidirsSlug": "mp3tourl"
       },
       "badges": [
         "fazier",
@@ -77,7 +81,8 @@
         "mossai-tools",
         "buildway",
         "deeplaunch",
-        "startup-fast"
+        "startup-fast",
+        "bestsky-tools"
       ]
     },
     "videotourl": {
@@ -88,7 +93,8 @@
         "domain": "www.videotourl.com",
         "verifiedDrSlug": "www-videotourl-com",
         "startupFameSlug": "videotourl",
-        "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F"
+        "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F",
+        "aidirsSlug": "videotourl"
       },
       "badges": [
         "fazier",
@@ -118,7 +124,8 @@
         "mossai-tools",
         "buildway",
         "deeplaunch",
-        "startup-fast"
+        "startup-fast",
+        "bestsky-tools"
       ]
     }
   }

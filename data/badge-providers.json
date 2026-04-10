@@ -126,9 +126,11 @@
       "target": "_blank"
     },
     "aidirs": {
-      "hrefTemplate": "https://aidirs.org/item/{siteSlug}",
-      "altTemplate": "{siteName} on AIDirs",
-      "labelTemplate": "{siteName} on AIDirs"
+      "hrefTemplate": "https://aidirs.org/item/{aidirsSlug}",
+      "alt": "Listed on AIDirs",
+      "src": "https://aidirs.org/badges/badge-listed-dark.svg",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
     },
     "submito": {
       "hrefTemplate": "https://submito.net",
@@ -176,6 +178,13 @@
       "target": "_blank",
       "width": 150,
       "height": 44
+    },
+    "bestsky-tools": {
+      "hrefTemplate": "https://bestsky.tools?utm_source=badge",
+      "alt": "Featured on BestskyTools",
+      "src": "https://assets.bestsky.tools/badges/featured-light.svg",
+      "target": "_blank",
+      "width": 150
     },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
