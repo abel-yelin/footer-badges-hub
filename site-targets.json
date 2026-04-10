@@ -7,6 +7,12 @@
       "tokenKey": "stampmaker"
     },
     {
+      "name": "pdftourl",
+      "enabled": true,
+      "revalidateUrl": "https://www.pdftourl.net/api/revalidate-footer-badges",
+      "tokenKey": "pdftourl"
+    },
+    {
       "name": "mp3tourl",
       "enabled": true,
       "revalidateUrl": "https://www.mp3tourl.com/api/revalidate-footer-badges",

@@ -180,6 +180,185 @@
         "height": 50
       }
     ],
+    "pdftourl": [
+      {
+        "href": "https://findly.tools/pdftourl?utm_source=pdftourl",
+        "alt": "Featured on Findly.tools",
+        "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+        "width": 175,
+        "height": 55
+      },
+      {
+        "href": "https://turbo0.com/item/pdf-to-url",
+        "alt": "Listed on Turbo0",
+        "src": "https://img.turbo0.com/badge-listed-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://twelve.tools",
+        "alt": "Featured on Twelve Tools",
+        "src": "https://twelve.tools/badge0-dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://aibesttop.com",
+        "alt": "Listed on AIBestTop",
+        "label": "Listed on AIBestTop"
+      },
+      {
+        "href": "https://verifieddr.com/website/www-pdftourl-net",
+        "alt": "Verified DR - Verified Domain Rating for www.pdftourl.net",
+        "src": "https://verifieddr.com/badge/www-pdftourl-net.svg",
+        "width": 220,
+        "height": 68
+      },
+      {
+        "href": "https://lovableapp.org",
+        "alt": "Lovable App Badge",
+        "src": "https://lovableapp.org/lovable-app-badge.svg",
+        "width": 165,
+        "height": 32
+      },
+      {
+        "href": "https://yo.directory/",
+        "alt": "yo.directory",
+        "src": "https://cdn.prod.website-files.com/65c1546fa73ea974db789e3d/65e1e171f89ebfa7bd0129ac_yodirectory-featured.png",
+        "width": 150,
+        "height": 54
+      },
+      {
+        "href": "https://artificin.com",
+        "alt": "Featured on Artificin",
+        "src": "https://artificin.com/badges/Artificin-badge.png",
+        "width": 175,
+        "height": 50
+      },
+      {
+        "href": "https://startupfa.me/s/pdftourl.net?utm_source=www.pdftourl.net",
+        "alt": "www.pdftourl.net - Featured on Startup Fame",
+        "src": "https://startupfa.me/badges/featured-badge.webp",
+        "width": 171,
+        "height": 54
+      },
+      {
+        "href": "https://toolfame.com/item/pdf-to-url",
+        "alt": "Featured on toolfame.com",
+        "src": "https://toolfame.com/badge-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://aitoolfame.com/item/pdf-to-url",
+        "alt": "Featured on aitoolfame.com",
+        "src": "https://aitoolfame.com/badge-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://goodaitools.com/ai/pdftourl",
+        "alt": "Badge",
+        "src": "https://goodaitools.com/assets/images/badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "height": 54
+      },
+      {
+        "href": "https://showmebest.ai",
+        "alt": "Featured on ShowMeBestAI",
+        "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 220,
+        "height": 60
+      },
+      {
+        "href": "https://www.ontoplist.com/best-law-firms/",
+        "alt": "Top [count] General Practice Attorneys - OnToplist.com",
+        "src": "https://www.ontoplist.com/images/ontoplist31.png?id=69d86f68ed466",
+        "target": "_blank"
+      },
+      {
+        "href": "https://aidirs.org/item/pdf-to-url",
+        "alt": "Listed on AIDirs",
+        "src": "https://aidirs.org/badges/badge-listed-dark.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://fazier.com/launches/www.pdftourl.net",
+        "alt": "pdftourl on Fazier",
+        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+        "width": 120,
+        "height": 54
+      },
+      {
+        "href": "https://saasfame.com/item/pdf-to-url",
+        "alt": "Featured on saasfame.com",
+        "src": "https://saasfame.com/badge-light.svg",
+        "width": 170,
+        "height": 54
+      },
+      {
+        "href": "https://dofollow.tools",
+        "alt": "Featured on Dofollow.Tools",
+        "src": "https://dofollow.tools/badge/badge_dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://submitaitools.org",
+        "alt": "Submit AI Tools",
+        "src": "https://submitaitools.org/static_submitaitools/images/submitaitools.png",
+        "target": "_blank",
+        "width": 200,
+        "height": 60
+      },
+      {
+        "href": "https://mossai.org",
+        "alt": "MossAI Tools",
+        "label": "MossAI Tools",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.buildway.cc",
+        "alt": "Listed on BuildWay",
+        "src": "https://www.buildway.cc/logo.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://deeplaunch.io",
+        "alt": "Featured on DeepLaunch.io",
+        "src": "https://deeplaunch.io/badge/badge_dark.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://startupfa.st",
+        "alt": "Powered by Startup Fast",
+        "src": "https://startupfa.st/images/badges/powered-by-light.svg",
+        "target": "_blank",
+        "width": 150,
+        "height": 44
+      },
+      {
+        "href": "https://bestsky.tools?utm_source=badge",
+        "alt": "Featured on BestskyTools",
+        "src": "https://assets.bestsky.tools/badges/featured-light.svg",
+        "target": "_blank",
+        "width": 150
+      },
+      {
+        "href": "https://aiagentsdirectory.com/agent/pdf-to-url?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content=pdf-to-url",
+        "alt": "PDF to URL - Featured AI Agent on AI Agents Directory",
+        "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
+        "width": 200,
+        "height": 50
+      }
+    ],
     "mp3tourl": [
       {
         "href": "https://fazier.com/launches/www.mp3tourl.com",

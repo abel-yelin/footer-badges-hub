@@ -42,6 +42,47 @@
         "ai-agents-directory"
       ]
     },
+    "pdftourl": {
+      "variables": {
+        "siteName": "pdftourl",
+        "siteSlug": "pdftourl",
+        "listingSlug": "pdf-to-url",
+        "domain": "www.pdftourl.net",
+        "verifiedDrSlug": "www-pdftourl-net",
+        "startupFameSlug": "pdftourl.net",
+        "siteUrlEncoded": "https%3A%2F%2Fwww.pdftourl.net%2F",
+        "aidirsSlug": "pdf-to-url",
+        "aiAgentsDirectorySlug": "pdf-to-url",
+        "aiAgentsDirectoryAlt": "PDF to URL - Featured AI Agent on AI Agents Directory"
+      },
+      "badges": [
+        "findly",
+        "turbo0",
+        "twelve-tools",
+        "aibesttop",
+        "verifieddr",
+        "lovableapp",
+        "yo-directory",
+        "artificin",
+        "startup-fame",
+        "toolfame",
+        "aitoolfame",
+        "good-ai-tools",
+        "showmebestai",
+        "ontoplist",
+        "aidirs",
+        "fazier",
+        "saasfame",
+        "dofollow-tools",
+        "submit-ai-tools",
+        "mossai-tools",
+        "buildway",
+        "deeplaunch",
+        "startup-fast",
+        "bestsky-tools",
+        "ai-agents-directory"
+      ]
+    },
     "mp3tourl": {
       "variables": {
         "siteName": "mp3tourl",
