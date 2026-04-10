@@ -78,6 +78,14 @@
         "height": 54
       },
       {
+        "href": "https://goodaitools.com/ai/stampmaker",
+        "alt": "Badge",
+        "src": "https://goodaitools.com/assets/images/badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "height": 54
+      },
+      {
         "href": "https://showmebest.ai",
         "alt": "Featured on ShowMeBestAI",
         "src": "https://showmebest.ai/badge/feature-badge-white.webp",
@@ -150,9 +158,12 @@
         "height": 54
       },
       {
-        "href": "https://goodaitools.com",
-        "alt": "mp3tourl on Good AI Tools",
-        "label": "mp3tourl on Good AI Tools"
+        "href": "https://goodaitools.com/ai/mp3tourl",
+        "alt": "Badge",
+        "src": "https://goodaitools.com/assets/images/badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "height": 54
       },
       {
         "href": "https://showmebest.ai",
@@ -243,9 +254,12 @@
         "height": 54
       },
       {
-        "href": "https://goodaitools.com",
-        "alt": "videotourl on Good AI Tools",
-        "label": "videotourl on Good AI Tools"
+        "href": "https://goodaitools.com/ai/videotourl",
+        "alt": "Badge",
+        "src": "https://goodaitools.com/assets/images/badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "height": 54
       },
       {
         "href": "https://showmebest.ai",

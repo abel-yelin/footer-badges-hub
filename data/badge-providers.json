@@ -103,9 +103,12 @@
       "labelTemplate": "{siteName} on Indie.Deals"
     },
     "good-ai-tools": {
-      "hrefTemplate": "https://goodaitools.com",
-      "altTemplate": "{siteName} on Good AI Tools",
-      "labelTemplate": "{siteName} on Good AI Tools"
+      "hrefTemplate": "https://goodaitools.com/ai/{siteSlug}",
+      "alt": "Badge",
+      "src": "https://goodaitools.com/assets/images/badge.png",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "height": 54
     },
     "showmebestai": {
       "hrefTemplate": "https://showmebest.ai",
