@@ -154,6 +154,13 @@
       "label": "MossAI Tools",
       "target": "_blank"
     },
+    "buildway": {
+      "hrefTemplate": "https://www.buildway.cc",
+      "alt": "Listed on BuildWay",
+      "src": "https://www.buildway.cc/logo.png",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
       "altTemplate": "{aiAgentsDirectoryAlt}",

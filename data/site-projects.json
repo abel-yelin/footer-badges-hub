@@ -33,6 +33,7 @@
         "dofollow-tools",
         "submit-ai-tools",
         "mossai-tools",
+        "buildway",
         "ai-agents-directory"
       ]
     },
@@ -71,7 +72,8 @@
           }
         },
         "submit-ai-tools",
-        "mossai-tools"
+        "mossai-tools",
+        "buildway"
       ]
     },
     "videotourl": {
@@ -109,7 +111,8 @@
           }
         },
         "submit-ai-tools",
-        "mossai-tools"
+        "mossai-tools",
+        "buildway"
       ]
     }
   }
