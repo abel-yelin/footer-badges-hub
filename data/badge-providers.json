@@ -120,9 +120,10 @@
       "height": 60
     },
     "ontoplist": {
-      "hrefTemplate": "https://www.ontoplist.com/software-blogs/",
-      "altTemplate": "{siteName} on OnTopList",
-      "labelTemplate": "{siteName} on OnTopList"
+      "hrefTemplate": "https://www.ontoplist.com/best-law-firms/",
+      "alt": "Top [count] General Practice Attorneys - OnToplist.com",
+      "src": "https://www.ontoplist.com/images/ontoplist31.png?id=69d86f68ed466",
+      "target": "_blank"
     },
     "aidirs": {
       "hrefTemplate": "https://aidirs.org/item/{siteSlug}",
