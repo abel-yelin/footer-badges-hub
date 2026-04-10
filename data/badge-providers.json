@@ -111,6 +111,8 @@
       "hrefTemplate": "https://showmebest.ai",
       "alt": "Featured on ShowMeBestAI",
       "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
       "width": 220,
       "height": 60
     },

@@ -45,6 +45,8 @@ function applyTemplate(providerId, provider, variables, override = {}) {
       `${providerId}.alt`,
     ),
   };
+  const targetValue = getOverrideValue(override, 'target', provider.target);
+  const relValue = getOverrideValue(override, 'rel', provider.rel);
 
   const srcValue = getOverrideValue(
     override,
@@ -69,6 +71,18 @@ function applyTemplate(providerId, provider, variables, override = {}) {
       variables,
       `${providerId}.label`,
     );
+  }
+
+  if (targetValue) {
+    badge.target = replacePlaceholders(
+      targetValue,
+      variables,
+      `${providerId}.target`,
+    );
+  }
+
+  if (relValue) {
+    badge.rel = replacePlaceholders(relValue, variables, `${providerId}.rel`);
   }
 
   if (widthValue !== undefined && widthValue !== null) {
