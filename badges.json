@@ -124,6 +124,12 @@
         "height": 60
       },
       {
+        "href": "https://mossai.org",
+        "alt": "MossAI Tools",
+        "label": "MossAI Tools",
+        "target": "_blank"
+      },
+      {
         "href": "https://aiagentsdirectory.com/agent/digital-stamp-maker?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content=digital-stamp-maker",
         "alt": "Digital Stamp Maker - Featured AI Agent on AI Agents Directory",
         "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
@@ -228,6 +234,12 @@
         "target": "_blank",
         "width": 200,
         "height": 60
+      },
+      {
+        "href": "https://mossai.org",
+        "alt": "MossAI Tools",
+        "label": "MossAI Tools",
+        "target": "_blank"
       }
     ],
     "videotourl": [
@@ -327,6 +339,12 @@
         "target": "_blank",
         "width": 200,
         "height": 60
+      },
+      {
+        "href": "https://mossai.org",
+        "alt": "MossAI Tools",
+        "label": "MossAI Tools",
+        "target": "_blank"
       }
     ]
   }

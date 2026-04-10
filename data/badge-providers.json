@@ -147,6 +147,12 @@
       "width": 200,
       "height": 60
     },
+    "mossai-tools": {
+      "hrefTemplate": "https://mossai.org",
+      "alt": "MossAI Tools",
+      "label": "MossAI Tools",
+      "target": "_blank"
+    },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
       "altTemplate": "{aiAgentsDirectoryAlt}",
