@@ -161,6 +161,14 @@
       "target": "_blank",
       "rel": "noopener noreferrer"
     },
+    "deeplaunch": {
+      "hrefTemplate": "https://deeplaunch.io",
+      "alt": "Featured on DeepLaunch.io",
+      "src": "https://deeplaunch.io/badge/badge_dark.svg",
+      "target": "_blank",
+      "width": 200,
+      "height": 54
+    },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
       "altTemplate": "{aiAgentsDirectoryAlt}",
