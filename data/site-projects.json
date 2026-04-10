@@ -35,6 +35,7 @@
         "mossai-tools",
         "buildway",
         "deeplaunch",
+        "startup-fast",
         "ai-agents-directory"
       ]
     },
@@ -75,7 +76,8 @@
         "submit-ai-tools",
         "mossai-tools",
         "buildway",
-        "deeplaunch"
+        "deeplaunch",
+        "startup-fast"
       ]
     },
     "videotourl": {
@@ -115,7 +117,8 @@
         "submit-ai-tools",
         "mossai-tools",
         "buildway",
-        "deeplaunch"
+        "deeplaunch",
+        "startup-fast"
       ]
     }
   }

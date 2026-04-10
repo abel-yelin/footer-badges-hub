@@ -169,6 +169,14 @@
       "width": 200,
       "height": 54
     },
+    "startup-fast": {
+      "hrefTemplate": "https://startupfa.st",
+      "alt": "Powered by Startup Fast",
+      "src": "https://startupfa.st/images/badges/powered-by-light.svg",
+      "target": "_blank",
+      "width": 150,
+      "height": 44
+    },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
       "altTemplate": "{aiAgentsDirectoryAlt}",
