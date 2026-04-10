@@ -141,8 +141,11 @@
     },
     "submit-ai-tools": {
       "hrefTemplate": "https://submitaitools.org",
-      "altTemplate": "{siteName} on Submit AI Tools",
-      "labelTemplate": "{siteName} on Submit AI Tools"
+      "alt": "Submit AI Tools",
+      "src": "https://submitaitools.org/static_submitaitools/images/submitaitools.png",
+      "target": "_blank",
+      "width": 200,
+      "height": 60
     },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
