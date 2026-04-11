@@ -186,6 +186,15 @@
       "target": "_blank",
       "width": 150
     },
+    "dang-ai": {
+      "hrefTemplate": "https://dang.ai/",
+      "alt": "Dang.ai",
+      "src": "https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "width": 150,
+      "height": 54
+    },
     "ai-agents-directory": {
       "hrefTemplate": "https://aiagentsdirectory.com/agent/{aiAgentsDirectorySlug}?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content={aiAgentsDirectorySlug}",
       "altTemplate": "{aiAgentsDirectoryAlt}",
