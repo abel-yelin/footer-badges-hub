@@ -449,9 +449,12 @@
         "height": 54
       },
       {
-        "href": "https://verifieddr.com/website/www-mp3tourl-com",
-        "alt": "mp3tourl on Verified DR",
-        "label": "mp3tourl on Verified DR"
+        "href": "https://verifieddr.com/website/mp3tourl-com",
+        "alt": "Verified DR - Verified Domain Rating for www.mp3tourl.com",
+        "src": "https://verifieddr.com/badge/mp3tourl-com.svg",
+        "target": "_blank",
+        "width": 220,
+        "height": 68
       },
       {
         "href": "https://submitaitools.org",

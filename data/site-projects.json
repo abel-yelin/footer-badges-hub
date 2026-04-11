@@ -94,7 +94,7 @@
         "siteSlug": "mp3tourl",
         "listingSlug": "mp3tourl",
         "domain": "www.mp3tourl.com",
-        "verifiedDrSlug": "www-mp3tourl-com",
+        "verifiedDrSlug": "mp3tourl-com",
         "startupFameSlug": "mp3tourl",
         "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F",
         "aidirsSlug": "mp3tourl"
@@ -116,11 +116,7 @@
         {
           "provider": "verifieddr",
           "override": {
-            "alt": "mp3tourl on Verified DR",
-            "label": "mp3tourl on Verified DR",
-            "src": null,
-            "width": null,
-            "height": null
+            "target": "_blank"
           }
         },
         "submit-ai-tools",
