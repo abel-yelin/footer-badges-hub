@@ -1,0 +1,4 @@
+interface:
+  display_name: "Footer Badges Install"
+  short_description: "Install footer badge SDK in Next.js"
+  default_prompt: "Install @luolink/footer-badges into this Next.js project, preserve the existing footer, and add runtime fetch plus revalidate support."
