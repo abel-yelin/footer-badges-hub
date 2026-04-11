@@ -117,6 +117,15 @@
         "rel": "noopener noreferrer"
       },
       {
+        "href": "https://aidirs.best",
+        "alt": "Featured on Aidirs",
+        "src": "https://aidirs.best/light.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 200,
+        "height": 56
+      },
+      {
         "href": "https://fazier.com/launches/www.stampmaker.io",
         "alt": "stampmaker on Fazier",
         "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
@@ -315,6 +324,15 @@
         "rel": "noopener noreferrer"
       },
       {
+        "href": "https://aidirs.best",
+        "alt": "Featured on Aidirs",
+        "src": "https://aidirs.best/light.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 200,
+        "height": 56
+      },
+      {
         "href": "https://fazier.com/launches/www.pdftourl.net",
         "alt": "pdftourl on Fazier",
         "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
@@ -459,6 +477,15 @@
         "src": "https://aidirs.org/badges/badge-listed-dark.svg",
         "target": "_blank",
         "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://aidirs.best",
+        "alt": "Featured on Aidirs",
+        "src": "https://aidirs.best/light.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 200,
+        "height": 56
       },
       {
         "href": "https://submito.net",
@@ -618,6 +645,15 @@
         "src": "https://aidirs.org/badges/badge-listed-dark.svg",
         "target": "_blank",
         "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://aidirs.best",
+        "alt": "Featured on Aidirs",
+        "src": "https://aidirs.best/light.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 200,
+        "height": 56
       },
       {
         "href": "https://submito.net",

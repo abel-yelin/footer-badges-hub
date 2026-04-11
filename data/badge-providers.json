@@ -141,6 +141,15 @@
       "target": "_blank",
       "rel": "noopener noreferrer"
     },
+    "aidirs-best": {
+      "hrefTemplate": "https://aidirs.best",
+      "alt": "Featured on Aidirs",
+      "src": "https://aidirs.best/light.svg",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "width": 200,
+      "height": 56
+    },
     "submito": {
       "hrefTemplate": "https://submito.net",
       "altTemplate": "{siteName} on Submito",
