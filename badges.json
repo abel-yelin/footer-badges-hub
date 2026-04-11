@@ -208,9 +208,10 @@
         "label": "Listed on AIBestTop"
       },
       {
-        "href": "https://verifieddr.com/website/www-pdftourl-net",
+        "href": "https://verifieddr.com/website/pdftourl-net",
         "alt": "Verified DR - Verified Domain Rating for www.pdftourl.net",
         "src": "https://verifieddr.com/badge/pdftourl-net.svg",
+        "target": "_blank",
         "width": 220,
         "height": 68
       },

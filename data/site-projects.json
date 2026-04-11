@@ -48,7 +48,7 @@
         "siteSlug": "pdftourl",
         "listingSlug": "pdf-to-url",
         "domain": "www.pdftourl.net",
-        "verifiedDrSlug": "www-pdftourl-net",
+        "verifiedDrSlug": "pdftourl-net",
         "startupFameSlug": "pdftourl.net",
         "siteUrlEncoded": "https%3A%2F%2Fwww.pdftourl.net%2F",
         "aidirsSlug": "pdf-to-url",
@@ -60,7 +60,12 @@
         "turbo0",
         "twelve-tools",
         "aibesttop",
-        "verifieddr",
+        {
+          "provider": "verifieddr",
+          "override": {
+            "target": "_blank"
+          }
+        },
         "lovableapp",
         "yo-directory",
         "artificin",
