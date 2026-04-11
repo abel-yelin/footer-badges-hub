@@ -36,6 +36,15 @@
         "height": 68
       },
       {
+        "href": "https://domainrank.app",
+        "alt": "stampmaker.io Domain Rating",
+        "src": "https://domainrank.app/api/badge/stampmaker.io?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
+      },
+      {
         "href": "https://lovableapp.org",
         "alt": "Lovable App Badge",
         "src": "https://lovableapp.org/lovable-app-badge.svg",
@@ -223,6 +232,15 @@
         "target": "_blank",
         "width": 220,
         "height": 68
+      },
+      {
+        "href": "https://domainrank.app",
+        "alt": "pdftourl.net Domain Rating",
+        "src": "https://domainrank.app/api/badge/pdftourl.net?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
       },
       {
         "href": "https://lovableapp.org",
@@ -475,6 +493,15 @@
         "height": 68
       },
       {
+        "href": "https://domainrank.app",
+        "alt": "mp3tourl.com Domain Rating",
+        "src": "https://domainrank.app/api/badge/mp3tourl.com?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
+      },
+      {
         "href": "https://submitaitools.org",
         "alt": "Submit AI Tools",
         "src": "https://submitaitools.org/static_submitaitools/images/submitaitools.png",
@@ -620,6 +647,15 @@
         "href": "https://verifieddr.com/website/www-videotourl-com",
         "alt": "videotourl on Verified DR",
         "label": "videotourl on Verified DR"
+      },
+      {
+        "href": "https://domainrank.app",
+        "alt": "videotourl.com Domain Rating",
+        "src": "https://domainrank.app/api/badge/videotourl.com?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
       },
       {
         "href": "https://submitaitools.org",
