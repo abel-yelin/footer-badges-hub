@@ -210,7 +210,16 @@
         "fazier",
         "findly",
         "indie-deals",
-        "startup-fame",
+        {
+          "provider": "startup-fame",
+          "override": {
+            "alt": "googlies.online - Featured on Startup Fame",
+            "label": "googlies.online - Featured on Startup Fame",
+            "src": null,
+            "width": null,
+            "height": null
+          }
+        },
         "twelve-tools",
         "good-ai-tools",
         "showmebestai",
@@ -224,7 +233,12 @@
         {
           "provider": "verifieddr",
           "override": {
-            "target": "_blank"
+            "alt": "googlies.online on Verified DR",
+            "label": "googlies.online on Verified DR",
+            "src": null,
+            "target": "_blank",
+            "width": null,
+            "height": null
           }
         },
         "domainrank",

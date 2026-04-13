@@ -770,9 +770,7 @@
       {
         "href": "https://startupfa.me/s/googlies-online?utm_source=googlies.online",
         "alt": "googlies.online - Featured on Startup Fame",
-        "src": "https://startupfa.me/badges/featured-badge.webp",
-        "width": 171,
-        "height": 54
+        "label": "googlies.online - Featured on Startup Fame"
       },
       {
         "href": "https://twelve.tools",
@@ -846,11 +844,9 @@
       },
       {
         "href": "https://verifieddr.com/website/googlies-online",
-        "alt": "Verified DR - Verified Domain Rating for googlies.online",
-        "src": "https://verifieddr.com/badge/googlies-online.svg",
-        "target": "_blank",
-        "width": 220,
-        "height": 68
+        "alt": "googlies.online on Verified DR",
+        "label": "googlies.online on Verified DR",
+        "target": "_blank"
       },
       {
         "href": "https://domainrank.app",
