@@ -749,13 +749,6 @@
     ],
     "googlies": [
       {
-        "href": "https://fazier.com/launches/googlies.online",
-        "alt": "googlies on Fazier",
-        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
-        "width": 120,
-        "height": 54
-      },
-      {
         "href": "https://findly.tools/googlies?utm_source=googlies",
         "alt": "Featured on Findly.tools",
         "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
@@ -763,9 +756,59 @@
         "height": 55
       },
       {
-        "href": "https://indie.deals?ref=https%3A%2F%2Fgooglies.online%2F",
-        "alt": "googlies on Indie.Deals",
-        "label": "googlies on Indie.Deals"
+        "href": "https://turbo0.com/item/googlies",
+        "alt": "Listed on Turbo0",
+        "src": "https://img.turbo0.com/badge-listed-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://twelve.tools",
+        "alt": "Featured on Twelve Tools",
+        "src": "https://twelve.tools/badge0-dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://aibesttop.com",
+        "alt": "Listed on AIBestTop",
+        "label": "Listed on AIBestTop"
+      },
+      {
+        "href": "https://verifieddr.com/website/googlies-online",
+        "alt": "googlies.online on Verified DR",
+        "label": "googlies.online on Verified DR",
+        "target": "_blank"
+      },
+      {
+        "href": "https://domainrank.app",
+        "alt": "googlies.online Domain Rating",
+        "src": "https://domainrank.app/api/badge/googlies.online?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
+      },
+      {
+        "href": "https://lovableapp.org",
+        "alt": "Lovable App Badge",
+        "src": "https://lovableapp.org/lovable-app-badge.svg",
+        "width": 165,
+        "height": 32
+      },
+      {
+        "href": "https://yo.directory/",
+        "alt": "yo.directory",
+        "src": "https://cdn.prod.website-files.com/65c1546fa73ea974db789e3d/65e1e171f89ebfa7bd0129ac_yodirectory-featured.png",
+        "width": 150,
+        "height": 54
+      },
+      {
+        "href": "https://artificin.com",
+        "alt": "Featured on Artificin",
+        "src": "https://artificin.com/badges/Artificin-badge.png",
+        "width": 175,
+        "height": 50
       },
       {
         "href": "https://startupfa.me/s/googlies-online?utm_source=googlies.online",
@@ -773,10 +816,17 @@
         "label": "googlies.online - Featured on Startup Fame"
       },
       {
-        "href": "https://twelve.tools",
-        "alt": "Featured on Twelve Tools",
-        "src": "https://twelve.tools/badge0-dark.svg",
-        "width": 200,
+        "href": "https://toolfame.com/item/googlies",
+        "alt": "Featured on toolfame.com",
+        "src": "https://toolfame.com/badge-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://aitoolfame.com/item/googlies",
+        "alt": "Featured on aitoolfame.com",
+        "src": "https://aitoolfame.com/badge-light.svg",
+        "width": 175,
         "height": 54
       },
       {
@@ -819,21 +869,18 @@
         "height": 56
       },
       {
-        "href": "https://submito.net",
-        "alt": "googlies on Submito",
-        "label": "googlies on Submito"
-      },
-      {
-        "href": "https://turbo0.com/item/googlies",
-        "alt": "Listed on Turbo0",
-        "src": "https://img.turbo0.com/badge-listed-light.svg",
-        "width": 175,
+        "href": "https://fazier.com/launches/googlies.online",
+        "alt": "googlies on Fazier",
+        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+        "width": 120,
         "height": 54
       },
       {
-        "href": "https://launchigniter.com/product/googlies?ref=badge-googlies",
-        "alt": "googlies on LaunchIgniter",
-        "label": "googlies on LaunchIgniter"
+        "href": "https://saasfame.com/item/googlies",
+        "alt": "Featured on saasfame.com",
+        "src": "https://saasfame.com/badge-light.svg",
+        "width": 170,
+        "height": 54
       },
       {
         "href": "https://dofollow.tools",
@@ -841,21 +888,6 @@
         "src": "https://dofollow.tools/badge/badge_dark.svg",
         "width": 200,
         "height": 54
-      },
-      {
-        "href": "https://verifieddr.com/website/googlies-online",
-        "alt": "googlies.online on Verified DR",
-        "label": "googlies.online on Verified DR",
-        "target": "_blank"
-      },
-      {
-        "href": "https://domainrank.app",
-        "alt": "googlies.online Domain Rating",
-        "src": "https://domainrank.app/api/badge/googlies.online?theme=dark",
-        "target": "_blank",
-        "rel": "noopener noreferrer",
-        "width": 360,
-        "height": 80
       },
       {
         "href": "https://submitaitools.org",
@@ -909,6 +941,13 @@
         "rel": "noopener noreferrer",
         "width": 150,
         "height": 54
+      },
+      {
+        "href": "https://aiagentsdirectory.com/agent/googlies?utm_source=badge&utm_medium=referral&utm_campaign=free_listing&utm_content=googlies",
+        "alt": "Googlies - Featured AI Agent on AI Agents Directory",
+        "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
+        "width": 200,
+        "height": 50
       }
     ]
   },

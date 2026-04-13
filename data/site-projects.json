@@ -204,32 +204,15 @@
         "verifiedDrSlug": "googlies-online",
         "startupFameSlug": "googlies-online",
         "siteUrlEncoded": "https%3A%2F%2Fgooglies.online%2F",
-        "aidirsSlug": "googlies"
+        "aidirsSlug": "googlies",
+        "aiAgentsDirectorySlug": "googlies",
+        "aiAgentsDirectoryAlt": "Googlies - Featured AI Agent on AI Agents Directory"
       },
       "badges": [
-        "fazier",
         "findly",
-        "indie-deals",
-        {
-          "provider": "startup-fame",
-          "override": {
-            "alt": "googlies.online - Featured on Startup Fame",
-            "label": "googlies.online - Featured on Startup Fame",
-            "src": null,
-            "width": null,
-            "height": null
-          }
-        },
-        "twelve-tools",
-        "good-ai-tools",
-        "showmebestai",
-        "ontoplist",
-        "aidirs",
-        "aidirs-best",
-        "submito",
         "turbo0",
-        "launchigniter",
-        "dofollow-tools",
+        "twelve-tools",
+        "aibesttop",
         {
           "provider": "verifieddr",
           "override": {
@@ -242,13 +225,37 @@
           }
         },
         "domainrank",
+        "lovableapp",
+        "yo-directory",
+        "artificin",
+        {
+          "provider": "startup-fame",
+          "override": {
+            "alt": "googlies.online - Featured on Startup Fame",
+            "label": "googlies.online - Featured on Startup Fame",
+            "src": null,
+            "width": null,
+            "height": null
+          }
+        },
+        "toolfame",
+        "aitoolfame",
+        "good-ai-tools",
+        "showmebestai",
+        "ontoplist",
+        "aidirs",
+        "aidirs-best",
+        "fazier",
+        "saasfame",
+        "dofollow-tools",
         "submit-ai-tools",
         "mossai-tools",
         "buildway",
         "deeplaunch",
         "startup-fast",
         "bestsky-tools",
-        "dang-ai"
+        "dang-ai",
+        "ai-agents-directory"
       ]
     }
   }
