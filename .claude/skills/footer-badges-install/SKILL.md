@@ -27,6 +27,8 @@ Install the footer badge system into an existing project without replacing the p
     - `FOOTER_BADGES_PROJECT_ID`
     - `FOOTER_BADGES_REVALIDATE_SECONDS`
     - `FOOTER_BADGES_REVALIDATE_TOKEN`
+    - optional `FOOTER_BADGES_COPYRIGHT`
+    - optional `FOOTER_BADGES_LAST_UPDATED`
 11. Validate the touched files with the repo's formatter, type checker, or other local checks.
 
 ## Automation
@@ -53,6 +55,7 @@ Use `--dry-run` first when you want a non-destructive preview.
 - Only add the badge module; do not rewrite the entire footer unless the user explicitly asks.
 - Prefer the site's existing layout and styling patterns.
 - Keep badge rendering isolated so future SDK upgrades stay low-friction.
+- The default scaffold slot should render a two-row module: top meta line (copyright + last updated), bottom badge rail.
 - If the project is not a Next.js App Router project, stop and explain the mismatch clearly.
 - If scan results show multiple footer or layout candidates, inspect the smallest set needed and choose the one already used by the main marketing pages.
 

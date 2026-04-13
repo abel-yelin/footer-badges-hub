@@ -23,6 +23,12 @@
       "enabled": true,
       "revalidateUrl": "https://www.videotourl.com/api/revalidate-footer-badges",
       "tokenKey": "videotourl"
+    },
+    {
+      "name": "googlies",
+      "enabled": true,
+      "revalidateUrl": "https://googlies.online/api/revalidate-footer-badges",
+      "tokenKey": "googlies"
     }
   ]
 }

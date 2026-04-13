@@ -746,6 +746,174 @@
         "width": 150,
         "height": 54
       }
+    ],
+    "googlies": [
+      {
+        "href": "https://fazier.com/launches/googlies.online",
+        "alt": "googlies on Fazier",
+        "src": "https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=light",
+        "width": 120,
+        "height": 54
+      },
+      {
+        "href": "https://findly.tools/googlies?utm_source=googlies",
+        "alt": "Featured on Findly.tools",
+        "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+        "width": 175,
+        "height": 55
+      },
+      {
+        "href": "https://indie.deals?ref=https%3A%2F%2Fgooglies.online%2F",
+        "alt": "googlies on Indie.Deals",
+        "label": "googlies on Indie.Deals"
+      },
+      {
+        "href": "https://startupfa.me/s/googlies-online?utm_source=googlies.online",
+        "alt": "googlies.online - Featured on Startup Fame",
+        "src": "https://startupfa.me/badges/featured-badge.webp",
+        "width": 171,
+        "height": 54
+      },
+      {
+        "href": "https://twelve.tools",
+        "alt": "Featured on Twelve Tools",
+        "src": "https://twelve.tools/badge0-dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://goodaitools.com/ai/googlies",
+        "alt": "Badge",
+        "src": "https://goodaitools.com/assets/images/badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "height": 54
+      },
+      {
+        "href": "https://showmebest.ai",
+        "alt": "Featured on ShowMeBestAI",
+        "src": "https://showmebest.ai/badge/feature-badge-white.webp",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 220,
+        "height": 60
+      },
+      {
+        "href": "https://www.ontoplist.com/best-law-firms/",
+        "alt": "Top [count] General Practice Attorneys - OnToplist.com",
+        "src": "https://www.ontoplist.com/images/ontoplist31.png?id=69d86f68ed466",
+        "target": "_blank"
+      },
+      {
+        "href": "https://aidirs.org/item/googlies",
+        "alt": "Listed on AIDirs",
+        "src": "https://aidirs.org/badges/badge-listed-dark.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://aidirs.best",
+        "alt": "Featured on Aidirs",
+        "src": "https://aidirs.best/light.svg",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 200,
+        "height": 56
+      },
+      {
+        "href": "https://submito.net",
+        "alt": "googlies on Submito",
+        "label": "googlies on Submito"
+      },
+      {
+        "href": "https://turbo0.com/item/googlies",
+        "alt": "Listed on Turbo0",
+        "src": "https://img.turbo0.com/badge-listed-light.svg",
+        "width": 175,
+        "height": 54
+      },
+      {
+        "href": "https://launchigniter.com/product/googlies?ref=badge-googlies",
+        "alt": "googlies on LaunchIgniter",
+        "label": "googlies on LaunchIgniter"
+      },
+      {
+        "href": "https://dofollow.tools",
+        "alt": "Featured on Dofollow.Tools",
+        "src": "https://dofollow.tools/badge/badge_dark.svg",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://verifieddr.com/website/googlies-online",
+        "alt": "Verified DR - Verified Domain Rating for googlies.online",
+        "src": "https://verifieddr.com/badge/googlies-online.svg",
+        "target": "_blank",
+        "width": 220,
+        "height": 68
+      },
+      {
+        "href": "https://domainrank.app",
+        "alt": "googlies.online Domain Rating",
+        "src": "https://domainrank.app/api/badge/googlies.online?theme=dark",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 360,
+        "height": 80
+      },
+      {
+        "href": "https://submitaitools.org",
+        "alt": "Submit AI Tools",
+        "src": "https://submitaitools.org/static_submitaitools/images/submitaitools.png",
+        "target": "_blank",
+        "width": 200,
+        "height": 60
+      },
+      {
+        "href": "https://mossai.org",
+        "alt": "MossAI Tools",
+        "label": "MossAI Tools",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.buildway.cc",
+        "alt": "Listed on BuildWay",
+        "src": "https://www.buildway.cc/logo.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://deeplaunch.io",
+        "alt": "Featured on DeepLaunch.io",
+        "src": "https://deeplaunch.io/badge/badge_dark.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
+      },
+      {
+        "href": "https://startupfa.st",
+        "alt": "Powered by Startup Fast",
+        "src": "https://startupfa.st/images/badges/powered-by-light.svg",
+        "target": "_blank",
+        "width": 150,
+        "height": 44
+      },
+      {
+        "href": "https://bestsky.tools?utm_source=badge",
+        "alt": "Featured on BestskyTools",
+        "src": "https://assets.bestsky.tools/badges/featured-light.svg",
+        "target": "_blank",
+        "width": 150
+      },
+      {
+        "href": "https://dang.ai/",
+        "alt": "Dang.ai",
+        "src": "https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "width": 150,
+        "height": 54
+      }
     ]
   },
   "projectMeta": {
@@ -767,6 +935,11 @@
     "videotourl": {
       "footer": {
         "copyright": "© 2026 www.videotourl.com"
+      }
+    },
+    "googlies": {
+      "footer": {
+        "copyright": "© 2026 googlies.online"
       }
     }
   }

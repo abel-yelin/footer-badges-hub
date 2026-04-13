@@ -193,6 +193,49 @@
         "bestsky-tools",
         "dang-ai"
       ]
+    },
+    "googlies": {
+      "variables": {
+        "siteName": "googlies",
+        "siteSlug": "googlies",
+        "listingSlug": "googlies",
+        "domain": "googlies.online",
+        "domainRankDomain": "googlies.online",
+        "verifiedDrSlug": "googlies-online",
+        "startupFameSlug": "googlies-online",
+        "siteUrlEncoded": "https%3A%2F%2Fgooglies.online%2F",
+        "aidirsSlug": "googlies"
+      },
+      "badges": [
+        "fazier",
+        "findly",
+        "indie-deals",
+        "startup-fame",
+        "twelve-tools",
+        "good-ai-tools",
+        "showmebestai",
+        "ontoplist",
+        "aidirs",
+        "aidirs-best",
+        "submito",
+        "turbo0",
+        "launchigniter",
+        "dofollow-tools",
+        {
+          "provider": "verifieddr",
+          "override": {
+            "target": "_blank"
+          }
+        },
+        "domainrank",
+        "submit-ai-tools",
+        "mossai-tools",
+        "buildway",
+        "deeplaunch",
+        "startup-fast",
+        "bestsky-tools",
+        "dang-ai"
+      ]
     }
   }
 }

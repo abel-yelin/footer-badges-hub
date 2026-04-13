@@ -46,12 +46,17 @@ export const FOOTER_BADGES_FALLBACK: FooterBadge[] = [];
 
 ## 3. Load badges on the server
 
-Prefer a dedicated server wrapper component so the existing footer does not need to be rewritten for the first integration pass.
+Prefer a dedicated server wrapper component so the existing footer does not need to be rewritten for the first integration pass.  
+Default scaffold output uses a two-row layout: top line for copyright + updated date, bottom line for the badge rail.
 
 ```tsx
 import { getRemoteFooterBadges } from '@luolink/footer-badges';
 import { FOOTER_BADGES_FALLBACK } from '@/config/footer-badges';
 import { FooterBadgesMarquee } from '@luolink/footer-badges';
+
+function formatUSDate(date: Date) {
+  return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+}
 
 export async function FooterBadgesSlotServer() {
   const badges = await getRemoteFooterBadges({
@@ -67,7 +72,34 @@ export async function FooterBadgesSlotServer() {
     return null;
   }
 
-  return <FooterBadgesMarquee badges={badges} className="w-full" />;
+  const now = new Date();
+  const copyrightText =
+    process.env.FOOTER_BADGES_COPYRIGHT ??
+    `© ${now.getFullYear()} my-site. All Rights Reserved.`;
+  const lastUpdatedText =
+    process.env.FOOTER_BADGES_LAST_UPDATED ?? formatUSDate(now);
+
+  return (
+    <section className="border-t border-white/10 bg-[#070a10] text-white">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 lg:px-8">
+        <p className="text-sm text-white/75">
+          {copyrightText}
+          <span className="mx-2 text-white/40">·</span>
+          Last updated: {lastUpdatedText}
+        </p>
+        <div className="rounded-xl border border-white/15 bg-[#0d121c] px-2 py-2">
+          <FooterBadgesMarquee
+            badges={badges}
+            className="w-full"
+            listClassName="gap-2.5"
+            itemClassName="h-8 rounded-lg border border-white/15 bg-[#05070c] px-2.5 opacity-100 hover:border-white/30"
+            imageClassName="h-5 w-auto"
+            textClassName="border-none px-0 text-xs text-white/85 no-underline"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
 ```
 
@@ -110,6 +142,10 @@ FOOTER_BADGES_CONFIG_URL=https://abel-yelin.github.io/footer-badges-hub/badges.j
 FOOTER_BADGES_PROJECT_ID=your-project-id
 FOOTER_BADGES_REVALIDATE_SECONDS=3600
 FOOTER_BADGES_REVALIDATE_TOKEN=replace-with-your-token
+# Optional top-line override
+FOOTER_BADGES_COPYRIGHT=© 2026 Your Brand. All Rights Reserved.
+# Optional top-line override
+FOOTER_BADGES_LAST_UPDATED=4/13/2026
 ```
 
 ## 7. Validate

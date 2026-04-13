@@ -35,16 +35,28 @@ def write_file(path: Path, content: str, dry_run: bool) -> None:
 
 
 def ensure_env_block(content: str, project_id: str, config_url: str, token: str) -> str:
-    block = (
-        f'FOOTER_BADGES_CONFIG_URL={config_url}\n'
-        f'FOOTER_BADGES_PROJECT_ID={project_id}\n'
-        'FOOTER_BADGES_REVALIDATE_SECONDS=3600\n'
-        f'FOOTER_BADGES_REVALIDATE_TOKEN={token}\n'
-    )
-    if 'FOOTER_BADGES_CONFIG_URL=' in content:
-        return content
+    required_lines = [
+        f'FOOTER_BADGES_CONFIG_URL={config_url}',
+        f'FOOTER_BADGES_PROJECT_ID={project_id}',
+        'FOOTER_BADGES_REVALIDATE_SECONDS=3600',
+        f'FOOTER_BADGES_REVALIDATE_TOKEN={token}',
+    ]
+    optional_lines = [
+        '# Optional: override top-line copyright text',
+        '# FOOTER_BADGES_COPYRIGHT=© 2026 Your Brand. All Rights Reserved.',
+        '# Optional: override top-line last updated text',
+        '# FOOTER_BADGES_LAST_UPDATED=4/13/2026',
+    ]
     separator = '' if content.endswith('\n') or content == '' else '\n'
-    return f'{content}{separator}{block}'
+    merged = f'{content}{separator}'
+    for line in required_lines + optional_lines:
+        key = line.split('=', 1)[0].replace('# ', '')
+        if key and f'{key}=' in merged:
+            continue
+        if line.startswith('#') and line in merged:
+            continue
+        merged += f'{line}\n'
+    return merged
 
 
 def install_package(root: Path, manager: str, package_name: str, dry_run: bool) -> str:
@@ -98,6 +110,12 @@ def build_slot_component_content(
     return (
         f"import {{ FooterBadgesMarquee, getRemoteFooterBadges }} from '{package_name}';\n"
         f"import {{ FOOTER_BADGES_FALLBACK }} from '{fallback_import}';\n\n"
+        'function formatUSDate(date: Date) {\n'
+        '  const month = date.getMonth() + 1;\n'
+        '  const day = date.getDate();\n'
+        '  const year = date.getFullYear();\n'
+        '  return `${month}/${day}/${year}`;\n'
+        '}\n\n'
         'export async function FooterBadgesSlotServer() {\n'
         '  const badges = await getRemoteFooterBadges({\n'
         "    configUrl: process.env.FOOTER_BADGES_CONFIG_URL,\n"
@@ -110,12 +128,33 @@ def build_slot_component_content(
         '  if (badges.length === 0) {\n'
         '    return null;\n'
         '  }\n\n'
+        '  const now = new Date();\n'
+        f"  const defaultBrand = '{project_id}';\n"
+        '  const copyrightText =\n'
+        '    process.env.FOOTER_BADGES_COPYRIGHT ??\n'
+        '    `© ${now.getFullYear()} ${defaultBrand}. All Rights Reserved.`;\n'
+        '  const lastUpdatedText =\n'
+        '    process.env.FOOTER_BADGES_LAST_UPDATED ?? formatUSDate(now);\n\n'
         '  return (\n'
-        '    <div className="border-t">\n'
-        '      <div className="mx-auto flex max-w-7xl px-4 py-4 sm:px-6 lg:px-8">\n'
-        '        <FooterBadgesMarquee badges={badges} className="w-full" />\n'
+        '    <section className="border-t border-white/10 bg-[#070a10] text-white">\n'
+        '      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 lg:px-8">\n'
+        '        <p className="text-sm text-white/75">\n'
+        '          {copyrightText}\n'
+        '          <span className="mx-2 text-white/40">·</span>\n'
+        '          Last updated: {lastUpdatedText}\n'
+        '        </p>\n'
+        '        <div className="rounded-xl border border-white/15 bg-[#0d121c] px-2 py-2">\n'
+        '          <FooterBadgesMarquee\n'
+        '            badges={badges}\n'
+        '            className="w-full"\n'
+        '            listClassName="gap-2.5"\n'
+        '            itemClassName="h-8 rounded-lg border border-white/15 bg-[#05070c] px-2.5 opacity-100 hover:border-white/30"\n'
+        '            imageClassName="h-5 w-auto"\n'
+        '            textClassName="border-none px-0 text-xs text-white/85 no-underline"\n'
+        '          />\n'
+        '        </div>\n'
         '      </div>\n'
-        '    </div>\n'
+        '    </section>\n'
         '  );\n'
         '}\n'
     )
