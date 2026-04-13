@@ -9,7 +9,7 @@ It publishes `badges.json` to GitHub Pages and can notify all subscribed sites
 ## Files
 
 - `data/badge-providers.json`: reusable badge provider templates
-- `data/site-projects.json`: per-site variables and enabled provider list
+- `data/site-projects.json`: per-site variables, enabled provider list, and global footer text
 - `scripts/build-badges.mjs`: generates the final `badges.json`
 - `badges.json`: generated output consumed by all sites
 - `site-targets.json`: the list of sites to notify after config changes
@@ -59,7 +59,7 @@ Authorization: Bearer <FOOTER_BADGES_REVALIDATE_TOKEN>
 
 ## Update flow
 
-1. Edit `data/badge-providers.json` or `data/site-projects.json`
+1. Edit `data/badge-providers.json` or `data/site-projects.json` (for example `global.footer.copyrightTemplate`)
 2. Run `npm run build:badges` if you want to preview the generated output locally
 3. Push to `main`
 4. GitHub Actions regenerates `badges.json`

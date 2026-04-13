@@ -130,19 +130,27 @@ FOOTER_BADGES_CONFIG_URL
 
 - 维护每个网站的变量
 - 决定该网站启用哪些 badge 平台
+- 统一维护全站共用的 footer 文案（如版权）
 - 最终由脚本自动生成单一 `badges.json`
 
 示例：
 
 ```json
 {
-  "stampmaker": {
-    "variables": {
-      "siteSlug": "stampmaker",
-      "listingSlug": "stamp-maker",
-      "domain": "www.stampmaker.io"
-    },
-    "badges": ["findly", "turbo0"]
+  "global": {
+    "footer": {
+      "copyrightTemplate": "© {currentYear} {domain}"
+    }
+  },
+  "projects": {
+    "stampmaker": {
+      "variables": {
+        "siteSlug": "stampmaker",
+        "listingSlug": "stamp-maker",
+        "domain": "www.stampmaker.io"
+      },
+      "badges": ["findly", "turbo0"]
+    }
   }
 }
 ```

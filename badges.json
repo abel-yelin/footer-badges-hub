@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 3,
   "projects": {
     "stampmaker": [
       {
@@ -747,5 +747,27 @@
         "height": 54
       }
     ]
+  },
+  "projectMeta": {
+    "stampmaker": {
+      "footer": {
+        "copyright": "© 2026 www.stampmaker.io"
+      }
+    },
+    "pdftourl": {
+      "footer": {
+        "copyright": "© 2026 www.pdftourl.net"
+      }
+    },
+    "mp3tourl": {
+      "footer": {
+        "copyright": "© 2026 Googlies Media"
+      }
+    },
+    "videotourl": {
+      "footer": {
+        "copyright": "© 2026 www.videotourl.com"
+      }
+    }
   }
 }

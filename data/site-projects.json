@@ -1,5 +1,10 @@
 {
   "version": 1,
+  "global": {
+    "footer": {
+      "copyrightTemplate": "© {currentYear} {domain}"
+    }
+  },
   "projects": {
     "stampmaker": {
       "variables": {
@@ -97,6 +102,9 @@
       ]
     },
     "mp3tourl": {
+      "footer": {
+        "copyright": "© {currentYear} Googlies Media"
+      },
       "variables": {
         "siteName": "mp3tourl",
         "siteSlug": "mp3tourl",

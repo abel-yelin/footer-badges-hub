@@ -28,6 +28,54 @@ function getOverrideValue(override, key, fallback) {
     : fallback;
 }
 
+function resolveProjectFooter(config, globalConfig, variables) {
+  const globalFooter =
+    typeof globalConfig.footer === 'object' && globalConfig.footer !== null
+      ? globalConfig.footer
+      : {};
+  const projectFooter =
+    typeof config.footer === 'object' && config.footer !== null
+      ? config.footer
+      : {};
+
+  const projectExplicit = getOverrideValue(
+    projectFooter,
+    'copyright',
+    null,
+  );
+  if (typeof projectExplicit === 'string' && projectExplicit.trim() !== '') {
+    return {
+      copyright: replacePlaceholders(
+        projectExplicit,
+        variables,
+        'project.footer.copyright',
+      ),
+    };
+  }
+
+  const template = getOverrideValue(
+    projectFooter,
+    'copyrightTemplate',
+    getOverrideValue(
+      globalFooter,
+      'copyrightTemplate',
+      getOverrideValue(globalConfig, 'footerCopyright', null),
+    ),
+  );
+
+  if (typeof template !== 'string' || template.trim() === '') {
+    return null;
+  }
+
+  return {
+    copyright: replacePlaceholders(
+      template,
+      variables,
+      'project.footer.copyrightTemplate',
+    ),
+  };
+}
+
 function applyTemplate(providerId, provider, variables, override = {}) {
   const badge = {
     href: replacePlaceholders(
@@ -165,8 +213,13 @@ async function main() {
   }
 
   const providers = providersSource.providers;
+  const globalConfig =
+    typeof projectsSource.global === 'object' && projectsSource.global !== null
+      ? projectsSource.global
+      : {};
   const projects = projectsSource.projects;
   const generatedProjects = {};
+  const generatedProjectMeta = {};
 
   for (const [projectId, config] of Object.entries(projects)) {
     if (
@@ -179,17 +232,26 @@ async function main() {
 
     const variables = {
       projectId,
+      currentYear: new Date().getFullYear(),
       ...(config.variables ?? {}),
     };
 
     generatedProjects[projectId] = config.badges.map((badgeRef) =>
       resolveBadgeConfig(projectId, badgeRef, providers, variables),
     );
+
+    const projectFooter = resolveProjectFooter(config, globalConfig, variables);
+    if (projectFooter) {
+      generatedProjectMeta[projectId] = {
+        footer: projectFooter,
+      };
+    }
   }
 
   const generated = {
-    version: 1,
+    version: 3,
     projects: generatedProjects,
+    projectMeta: generatedProjectMeta,
   };
 
   await fs.writeFile(`${outputPath}\n`.trim(), `${JSON.stringify(generated, null, 2)}\n`);
