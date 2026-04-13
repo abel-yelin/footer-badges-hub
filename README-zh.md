@@ -428,4 +428,10 @@ OK videotourl
 4. 帮你写一份“GitHub 上怎么点按钮”的更细致图文步骤
 
 
- 
+{
+  "stampmaker": "fbb_7c4e6f0d0b1245d1b0a8b6d7f3c9e24a_9d5f2a1c6e7b4d8f",
+  "mp3tourl": "fbb_2e9a4c7d1f6b45a8b3d0c9e5f1a2746c_8b6d3f2a9c1e4d7b",
+  "videotourl": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d",
+  "pdftourl": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d",
+  "googlies": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d"
+}
