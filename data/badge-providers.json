@@ -219,6 +219,15 @@
       "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
       "width": 200,
       "height": 50
+    },
+    "huntifyai": {
+      "hrefTemplate": "https://huntifyai.com/tools/{huntifyAiSlug}",
+      "alt": "Featured on HuntifyAI",
+      "src": "https://huntifyai.com/api/badge?theme=light",
+      "target": "_blank",
+      "rel": "noopener",
+      "width": 220,
+      "height": 54
     }
   }
 }

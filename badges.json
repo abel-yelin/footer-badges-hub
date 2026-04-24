@@ -205,6 +205,15 @@
         "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
         "width": 200,
         "height": 50
+      },
+      {
+        "href": "https://huntifyai.com/tools/stampmaker",
+        "alt": "Featured on HuntifyAI",
+        "src": "https://huntifyai.com/api/badge?theme=light",
+        "target": "_blank",
+        "rel": "noopener",
+        "width": 220,
+        "height": 54
       }
     ],
     "pdftourl": [
@@ -412,6 +421,15 @@
         "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
         "width": 200,
         "height": 50
+      },
+      {
+        "href": "https://huntifyai.com/tools/pdftourl",
+        "alt": "Featured on HuntifyAI",
+        "src": "https://huntifyai.com/api/badge?theme=light",
+        "target": "_blank",
+        "rel": "noopener",
+        "width": 220,
+        "height": 54
       }
     ],
     "mp3tourl": [
@@ -580,6 +598,15 @@
         "rel": "noopener noreferrer",
         "width": 150,
         "height": 54
+      },
+      {
+        "href": "https://huntifyai.com/tools/mp3tourl",
+        "alt": "Featured on HuntifyAI",
+        "src": "https://huntifyai.com/api/badge?theme=light",
+        "target": "_blank",
+        "rel": "noopener",
+        "width": 220,
+        "height": 54
       }
     ],
     "videotourl": [
@@ -744,6 +771,15 @@
         "target": "_blank",
         "rel": "noopener noreferrer",
         "width": 150,
+        "height": 54
+      },
+      {
+        "href": "https://huntifyai.com/tools/videotourl",
+        "alt": "Featured on HuntifyAI",
+        "src": "https://huntifyai.com/api/badge?theme=light",
+        "target": "_blank",
+        "rel": "noopener",
+        "width": 220,
         "height": 54
       }
     ],
@@ -948,6 +984,15 @@
         "src": "https://aiagentsdirectory.com/featured-badge.svg?v=2024",
         "width": 200,
         "height": 50
+      },
+      {
+        "href": "https://huntifyai.com/tools/googlies",
+        "alt": "Featured on HuntifyAI",
+        "src": "https://huntifyai.com/api/badge?theme=light",
+        "target": "_blank",
+        "rel": "noopener",
+        "width": 220,
+        "height": 54
       }
     ]
   },

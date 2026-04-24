@@ -17,6 +17,7 @@
         "startupFameSlug": "stampmaker.io-195",
         "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F",
         "aidirsSlug": "stamp-maker",
+        "huntifyAiSlug": "stampmaker",
         "aiAgentsDirectorySlug": "digital-stamp-maker",
         "aiAgentsDirectoryAlt": "Digital Stamp Maker - Featured AI Agent on AI Agents Directory"
       },
@@ -48,7 +49,8 @@
         "startup-fast",
         "bestsky-tools",
         "dang-ai",
-        "ai-agents-directory"
+        "ai-agents-directory",
+        "huntifyai"
       ]
     },
     "pdftourl": {
@@ -62,6 +64,7 @@
         "startupFameSlug": "pdftourl.net",
         "siteUrlEncoded": "https%3A%2F%2Fwww.pdftourl.net%2F",
         "aidirsSlug": "pdf-to-url",
+        "huntifyAiSlug": "pdftourl",
         "aiAgentsDirectorySlug": "pdf-to-url",
         "aiAgentsDirectoryAlt": "PDF to URL - Featured AI Agent on AI Agents Directory"
       },
@@ -98,7 +101,8 @@
         "startup-fast",
         "bestsky-tools",
         "dang-ai",
-        "ai-agents-directory"
+        "ai-agents-directory",
+        "huntifyai"
       ]
     },
     "mp3tourl": {
@@ -114,7 +118,8 @@
         "verifiedDrSlug": "mp3tourl-com",
         "startupFameSlug": "mp3tourl",
         "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F",
-        "aidirsSlug": "mp3tourl"
+        "aidirsSlug": "mp3tourl",
+        "huntifyAiSlug": "mp3tourl"
       },
       "badges": [
         "fazier",
@@ -144,7 +149,8 @@
         "deeplaunch",
         "startup-fast",
         "bestsky-tools",
-        "dang-ai"
+        "dang-ai",
+        "huntifyai"
       ]
     },
     "videotourl": {
@@ -157,7 +163,8 @@
         "verifiedDrSlug": "www-videotourl-com",
         "startupFameSlug": "videotourl",
         "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F",
-        "aidirsSlug": "videotourl"
+        "aidirsSlug": "videotourl",
+        "huntifyAiSlug": "videotourl"
       },
       "badges": [
         "fazier",
@@ -191,7 +198,8 @@
         "deeplaunch",
         "startup-fast",
         "bestsky-tools",
-        "dang-ai"
+        "dang-ai",
+        "huntifyai"
       ]
     },
     "googlies": {
@@ -205,6 +213,7 @@
         "startupFameSlug": "googlies-online",
         "siteUrlEncoded": "https%3A%2F%2Fgooglies.online%2F",
         "aidirsSlug": "googlies",
+        "huntifyAiSlug": "googlies",
         "aiAgentsDirectorySlug": "googlies",
         "aiAgentsDirectoryAlt": "Googlies - Featured AI Agent on AI Agents Directory"
       },
@@ -255,7 +264,8 @@
         "startup-fast",
         "bestsky-tools",
         "dang-ai",
-        "ai-agents-directory"
+        "ai-agents-directory",
+        "huntifyai"
       ]
     }
   }
