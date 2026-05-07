@@ -1,5 +1,8 @@
 {
   "id": "pdftourl",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
   "variables": {
     "siteName": "pdftourl",
     "siteSlug": "pdftourl",

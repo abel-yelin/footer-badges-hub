@@ -1,5 +1,8 @@
 {
   "id": "googlies",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
   "variables": {
     "siteName": "googlies",
     "siteSlug": "googlies",

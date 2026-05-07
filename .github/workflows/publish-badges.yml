@@ -50,6 +50,8 @@ jobs:
         run: |
           mkdir -p .pages
           cp badges.json .pages/badges.json
+          mkdir -p .pages/projects
+          cp -R dist/projects/. .pages/projects/
           touch .pages/.nojekyll
 
       - name: Upload Pages artifact

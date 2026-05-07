@@ -4,7 +4,7 @@
 
 它解决 4 件事：
 
-- 运行时读取远程 `badges.json`
+- 运行时读取远程 `badges.json` 或单站点 JSON
 - 解析和校验指定 `projectId` 的 badge
 - 提供一个可直接使用的流动展示 React 组件
 - 提供一个可复用的 revalidate handler
@@ -143,7 +143,7 @@ export function Footer({ badges }: { badges: FooterBadge[] }) {
 ## 老项目接入时需要的环境变量
 
 ```env
-FOOTER_BADGES_CONFIG_URL=https://abel-yelin.github.io/footer-badges-hub/badges.json
+FOOTER_BADGES_CONFIG_URL=https://abel-yelin.github.io/footer-badges-hub/projects/your-project-id.json
 FOOTER_BADGES_PROJECT_ID=your-project-id
 FOOTER_BADGES_REVALIDATE_SECONDS=3600
 FOOTER_BADGES_REVALIDATE_TOKEN=replace-with-your-token
@@ -151,7 +151,7 @@ FOOTER_BADGES_REVALIDATE_TOKEN=replace-with-your-token
 
 其中：
 
-- `FOOTER_BADGES_CONFIG_URL`：中心配置地址
+- `FOOTER_BADGES_CONFIG_URL`：中心配置地址；新接入建议使用 `projects/<project-id>.json`，旧接入仍可使用 `badges.json`
 - `FOOTER_BADGES_PROJECT_ID`：当前站点在远程配置里的项目标识
 - `FOOTER_BADGES_REVALIDATE_SECONDS`：服务端缓存时间
 - `FOOTER_BADGES_REVALIDATE_TOKEN`：供 hub 调用刷新接口使用

@@ -7,6 +7,7 @@ const badgeSetsPath = path.join(process.cwd(), 'data', 'badge-sets.json');
 const projectsPath = path.join(process.cwd(), 'data', 'site-projects.json');
 const projectsDirPath = path.join(process.cwd(), 'data', 'projects');
 const outputPath = path.join(process.cwd(), 'badges.json');
+const projectOutputDirPath = path.join(process.cwd(), 'dist', 'projects');
 
 function replacePlaceholders(value, variables, context) {
   if (typeof value !== 'string') {
@@ -202,6 +203,20 @@ async function readJsonIfExists(filePath, fallbackValue) {
 
     throw error;
   }
+}
+
+async function writeJson(filePath, payload) {
+  await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`);
+}
+
+function getProjectOutputFileName(projectId) {
+  if (!/^[a-zA-Z0-9][a-zA-Z0-9_-]*$/.test(projectId)) {
+    throw new Error(
+      `Project "${projectId}" cannot be written as a project JSON file. Use letters, numbers, dashes, or underscores.`,
+    );
+  }
+
+  return `${projectId}.json`;
 }
 
 async function loadBadgeSets(providers) {
@@ -451,6 +466,7 @@ async function main() {
   );
   const generatedProjects = {};
   const generatedProjectMeta = {};
+  const generatedProjectFiles = {};
 
   if (projectEntries.length === 0) {
     throw new Error('No project configs found in data/site-projects.json or data/projects/.');
@@ -471,18 +487,35 @@ async function main() {
       ...(config.variables ?? {}),
     };
 
-    generatedProjects[projectId] = expandBadgeReferences(
+    const projectBadges = expandBadgeReferences(
       projectId,
       config.badges,
       badgeSets,
     ).map((badgeRef) => resolveBadgeConfig(projectId, badgeRef, providers, variables));
 
+    generatedProjects[projectId] = projectBadges;
+
     const projectFooter = resolveProjectFooter(config, globalConfig, variables);
+    const projectFile = {
+      version: 3,
+      projects: {
+        [projectId]: projectBadges,
+      },
+      projectMeta: {},
+    };
+
     if (projectFooter) {
       generatedProjectMeta[projectId] = {
         footer: projectFooter,
       };
+      projectFile.projectMeta = {
+        [projectId]: {
+          footer: projectFooter,
+        },
+      };
     }
+
+    generatedProjectFiles[projectId] = projectFile;
   }
 
   const generated = {
@@ -491,10 +524,20 @@ async function main() {
     projectMeta: generatedProjectMeta,
   };
 
-  await fs.writeFile(`${outputPath}\n`.trim(), `${JSON.stringify(generated, null, 2)}\n`);
+  await writeJson(outputPath, generated);
+
+  await fs.rm(projectOutputDirPath, { recursive: true, force: true });
+  await fs.mkdir(projectOutputDirPath, { recursive: true });
+
+  for (const [projectId, projectFile] of Object.entries(generatedProjectFiles)) {
+    await writeJson(
+      path.join(projectOutputDirPath, getProjectOutputFileName(projectId)),
+      projectFile,
+    );
+  }
 
   console.log(
-    `Generated badges.json for ${Object.keys(generatedProjects).length} projects.`,
+    `Generated badges.json and ${Object.keys(generatedProjectFiles).length} project files.`,
   );
 }
 

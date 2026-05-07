@@ -70,7 +70,7 @@ Every site needs:
 Example:
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/stampmaker.json"
 FOOTER_BADGES_PROJECT_ID="stampmaker"
 FOOTER_BADGES_REVALIDATE_TOKEN="stampmaker-secret"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -78,11 +78,11 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 
 ## 7. Publish
 
-- Optionally run `npm run build:badges` locally to preview the generated file
+- Optionally run `npm run build:badges` locally to preview `badges.json` and `dist/projects/*.json`
 - Optionally run `npm run report:badges` to inspect provider usage and project counts
 - Push to `main`
 - Wait for `Publish Footer Badges` to finish
-- Confirm `badges.json` is reachable from GitHub Pages
+- Confirm `badges.json` and `projects/<project-id>.json` are reachable from GitHub Pages
 
 ## 8. Manual refresh
 

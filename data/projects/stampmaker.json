@@ -1,5 +1,8 @@
 {
   "id": "stampmaker",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
   "variables": {
     "siteName": "stampmaker",
     "siteSlug": "stampmaker",
@@ -16,7 +19,12 @@
   },
   "badges": [
     {
-      "set": "all-providers"
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
     }
   ]
 }

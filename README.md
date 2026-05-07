@@ -3,8 +3,9 @@
 This scaffold is a standalone central repository template for shared footer
 badge config across many sites.
 
-It publishes `badges.json` to GitHub Pages and can notify all subscribed sites
- to revalidate their runtime footer badge cache after each update.
+It publishes a backward-compatible `badges.json` plus per-project badge JSON
+files to GitHub Pages, then notifies all subscribed sites to revalidate their
+runtime footer badge cache after each update.
 
 ## Files
 
@@ -14,7 +15,8 @@ It publishes `badges.json` to GitHub Pages and can notify all subscribed sites
 - `data/projects/*.json`: per-site variables, enabled badge sets/providers, and overrides
 - `scripts/build-badges.mjs`: generates the final `badges.json`
 - `scripts/report-badges.mjs`: prints a local maintenance report
-- `badges.json`: generated output consumed by all sites
+- `badges.json`: generated legacy output containing all projects
+- `dist/projects/*.json`: generated per-project outputs for smaller runtime fetches
 - `site-targets.json`: the list of sites to notify after config changes
 - `scripts/notify-sites.mjs`: posts revalidate requests to all configured sites
 - `.github/workflows/publish-badges.yml`: publishes `badges.json` to GitHub Pages
@@ -48,7 +50,14 @@ After Pages is enabled, the published config will be available at:
 https://abel-yelin.github.io/footer-badges-hub/badges.json
 ```
 
-Point each site's `FOOTER_BADGES_CONFIG_URL` to that address.
+Existing sites can point `FOOTER_BADGES_CONFIG_URL` to that address.
+
+For new or upgraded sites, prefer the per-project URL so each site fetches only
+its own badges:
+
+```txt
+https://abel-yelin.github.io/footer-badges-hub/projects/<project-id>.json
+```
 
 ## Site requirements
 
@@ -63,10 +72,10 @@ Authorization: Bearer <FOOTER_BADGES_REVALIDATE_TOKEN>
 ## Update flow
 
 1. Edit `data/badge-providers.json`, `data/badge-sets.json`, `data/site-projects.json`, or a file under `data/projects/`
-2. Run `npm run build:badges` if you want to preview the generated output locally
+2. Run `npm run build:badges` if you want to preview `badges.json` and `dist/projects/*.json` locally
 3. Push to `main`
-4. GitHub Actions regenerates `badges.json`
-5. GitHub Pages republishes `badges.json`
+4. GitHub Actions regenerates `badges.json` and `dist/projects/*.json`
+5. GitHub Pages republishes the full and per-project JSON files
 6. The workflow notifies all configured sites
 7. Each site revalidates the `footer-badges` cache tag immediately
 

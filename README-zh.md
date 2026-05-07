@@ -9,8 +9,8 @@
 你要搭建的是一个“中心配置仓库”，作用如下：
 
 - 统一维护所有网站的 badge 模板和站点变量
-- 把 `badges.json` 发布到 GitHub Pages
-- 各个网站运行时读取这份远程配置
+- 把兼容旧接入的 `badges.json` 和按站点拆分的 JSON 发布到 GitHub Pages
+- 各个网站运行时读取自己的远程配置
 - 更新 badge 后，通过 GitHub Action 主动通知所有网站刷新缓存
 - 不需要每个网站重新 build
 
@@ -52,6 +52,7 @@ scaffolds/footer-badges-hub
 - `data/projects/`
 - `data/site-projects.json`
 - `badges.json`
+- `dist/projects/*.json`
 - `site-targets.json`
 - `.github/workflows/publish-badges.yml`
 - `.github/workflows/revalidate-sites.yml`
@@ -75,7 +76,7 @@ GitHub Actions
 
 5. 保存
 
-完成后，这个仓库就可以通过 workflow 自动把 `badges.json` 发布到 GitHub Pages。
+完成后，这个仓库就可以通过 workflow 自动把 `badges.json` 和每个站点自己的 JSON 发布到 GitHub Pages。
 
 ---
 
@@ -91,6 +92,18 @@ https://<你的 GitHub 组织或用户名>.github.io/<仓库名>/badges.json
 
 ```txt
 https://abel-yelin.github.io/footer-badges-hub/badges.json
+```
+
+旧接入可以继续使用这个全集地址。新接入或升级后的站点，优先使用按站点拆分的地址：
+
+```txt
+https://<你的 GitHub 组织或用户名>.github.io/<仓库名>/projects/<project-id>.json
+```
+
+例如：
+
+```txt
+https://abel-yelin.github.io/footer-badges-hub/projects/stampmaker.json
 ```
 
 这个地址后面要配置到每个网站的：
@@ -198,7 +211,7 @@ FOOTER_BADGES_CONFIG_URL
 - 全局配置和项目顺序写在 `data/site-projects.json`
 - 网站变量写在 `data/projects/<project-id>.json`
 - 不再手工维护完整 `badges.json`
-- `badges.json` 由脚本自动生成
+- `badges.json` 和 `dist/projects/*.json` 都由脚本自动生成
 
 ### 本地生成命令
 
@@ -206,7 +219,7 @@ FOOTER_BADGES_CONFIG_URL
 npm run build:badges
 ```
 
-执行后会自动生成新的 `badges.json`。
+执行后会自动生成新的 `badges.json`，以及每个站点自己的 `dist/projects/<project-id>.json`。
 
 ### 本地维护报表
 
@@ -293,7 +306,7 @@ SITE_REVALIDATE_TOKENS_JSON
 ### stampmaker.io
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/stampmaker.json"
 FOOTER_BADGES_PROJECT_ID="stampmaker"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-stampmaker-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -302,7 +315,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ### pdftourl.net
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/pdftourl.json"
 FOOTER_BADGES_PROJECT_ID="pdftourl"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-pdftourl-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -311,7 +324,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ### mp3tourl.com
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/mp3tourl.json"
 FOOTER_BADGES_PROJECT_ID="mp3tourl"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-mp3tourl-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -320,7 +333,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ### videotourl.com
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/videotourl.json"
 FOOTER_BADGES_PROJECT_ID="videotourl"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-videotourl-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -329,7 +342,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ### googlies.online
 
 ```env
-FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/projects/googlies.json"
 FOOTER_BADGES_PROJECT_ID="googlies"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-googlies-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
@@ -378,8 +391,8 @@ GitHub Actions 会自动执行：
 
 它会做两件事：
 
-1. 先自动生成 `badges.json`
-2. 把 `badges.json` 发布到 GitHub Pages
+1. 先自动生成 `badges.json` 和 `dist/projects/*.json`
+2. 把这些 JSON 发布到 GitHub Pages
 3. 自动调用所有站点的 `/api/revalidate-footer-badges`
 
 ---
@@ -392,6 +405,12 @@ GitHub Actions 会自动执行：
 
 ```txt
 https://abel-yelin.github.io/footer-badges-hub/badges.json
+```
+
+也可以检查单站点配置：
+
+```txt
+https://abel-yelin.github.io/footer-badges-hub/projects/stampmaker.json
 ```
 
 确认返回的是你最新的 JSON 内容。

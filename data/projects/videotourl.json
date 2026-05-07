@@ -1,5 +1,8 @@
 {
   "id": "videotourl",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
   "variables": {
     "siteName": "videotourl",
     "siteSlug": "videotourl",
@@ -22,6 +25,7 @@
           "alt": "videotourl on Verified DR",
           "label": "videotourl on Verified DR",
           "src": null,
+          "target": "_blank",
           "width": null,
           "height": null
         }

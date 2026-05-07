@@ -32,6 +32,7 @@
         "href": "https://verifieddr.com/website/stampmaker-io",
         "alt": "Verified DR - Verified Domain Rating for www.stampmaker.io",
         "src": "https://verifieddr.com/badge/stampmaker-io.svg",
+        "target": "_blank",
         "width": 220,
         "height": 68
       },
@@ -744,7 +745,8 @@
       {
         "href": "https://verifieddr.com/website/www-videotourl-com",
         "alt": "videotourl on Verified DR",
-        "label": "videotourl on Verified DR"
+        "label": "videotourl on Verified DR",
+        "target": "_blank"
       },
       {
         "href": "https://domainrank.app",
@@ -1187,12 +1189,12 @@
   "projectMeta": {
     "stampmaker": {
       "footer": {
-        "copyright": "© 2026 www.stampmaker.io"
+        "copyright": "© 2026 Googlies Media"
       }
     },
     "pdftourl": {
       "footer": {
-        "copyright": "© 2026 www.pdftourl.net"
+        "copyright": "© 2026 Googlies Media"
       }
     },
     "mp3tourl": {
@@ -1202,12 +1204,12 @@
     },
     "videotourl": {
       "footer": {
-        "copyright": "© 2026 www.videotourl.com"
+        "copyright": "© 2026 Googlies Media"
       }
     },
     "googlies": {
       "footer": {
-        "copyright": "© 2026 googlies.online"
+        "copyright": "© 2026 Googlies Media"
       }
     }
   }
