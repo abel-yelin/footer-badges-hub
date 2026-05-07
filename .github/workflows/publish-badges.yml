@@ -5,12 +5,15 @@ on:
     branches: ['main']
     paths:
       - 'badges.json'
+      - 'data/badge-sets.json'
       - 'data/badge-providers.json'
+      - 'data/projects/**'
       - 'data/site-projects.json'
       - '.github/workflows/publish-badges.yml'
       - '.github/workflows/revalidate-sites.yml'
       - 'scripts/build-badges.mjs'
       - 'scripts/notify-sites.mjs'
+      - 'scripts/report-badges.mjs'
       - 'site-targets.json'
   workflow_dispatch:
 

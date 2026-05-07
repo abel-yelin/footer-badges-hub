@@ -228,6 +228,13 @@
       "rel": "noopener",
       "width": 220,
       "height": 54
+    },
+    "image2url": {
+      "hrefTemplate": "https://www.image2url.com?utm_source=badge",
+      "alt": "Featured on ImageToURL",
+      "src": "https://www.image2url.com/badges/featured-light.svg",
+      "target": "_blank",
+      "width": 150
     }
   }
 }

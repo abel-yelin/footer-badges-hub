@@ -1,0 +1,31 @@
+{
+  "id": "videotourl",
+  "variables": {
+    "siteName": "videotourl",
+    "siteSlug": "videotourl",
+    "listingSlug": "videotourl",
+    "domain": "www.videotourl.com",
+    "domainRankDomain": "videotourl.com",
+    "verifiedDrSlug": "www-videotourl-com",
+    "startupFameSlug": "videotourl",
+    "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F",
+    "aidirsSlug": "videotourl",
+    "huntifyAiSlug": "videotourl",
+    "aiAgentsDirectorySlug": "video-to-url",
+    "aiAgentsDirectoryAlt": "Video to URL - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "alt": "videotourl on Verified DR",
+          "label": "videotourl on Verified DR",
+          "src": null,
+          "width": null,
+          "height": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "mp3tourl",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
+  "variables": {
+    "siteName": "mp3tourl",
+    "siteSlug": "mp3tourl",
+    "listingSlug": "mp3tourl",
+    "domain": "www.mp3tourl.com",
+    "domainRankDomain": "mp3tourl.com",
+    "verifiedDrSlug": "mp3tourl-com",
+    "startupFameSlug": "mp3tourl",
+    "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F",
+    "aidirsSlug": "mp3tourl",
+    "huntifyAiSlug": "mp3tourl",
+    "aiAgentsDirectorySlug": "mp3-to-url",
+    "aiAgentsDirectoryAlt": "MP3 to URL - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
+    }
+  ]
+}

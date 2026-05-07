@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "sets": {
+    "all-providers": {
+      "include": "all-providers"
+    }
+  }
+}

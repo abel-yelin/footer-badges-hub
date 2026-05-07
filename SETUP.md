@@ -42,11 +42,22 @@ Edit `data/badge-providers.json`:
 - add one provider definition per badge platform
 - use `{variableName}` placeholders inside `hrefTemplate`, `altTemplate`, `labelTemplate`, or `srcTemplate`
 
+Edit `data/badge-sets.json`:
+
+- use `{ "include": "all-providers" }` when every provider in `data/badge-providers.json` should be enabled for projects using that set
+- add shared badge lists when multiple projects use the same providers in the same order
+- keep one-off provider references inside the project file instead of making a set for every special case
+
 Edit `data/site-projects.json`:
 
-- add one key per project under `projects`
+- configure global footer text
+- optionally set `projectOrder` to keep generated output stable
+
+Edit `data/projects/<project-id>.json`:
+
 - define shared variables for that project
-- list enabled badge providers in the desired order
+- list enabled badge sets and one-off providers in the desired order
+- use `overrides` for provider-specific project exceptions
 
 ## 6. Configure each consumer site
 
@@ -68,6 +79,7 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ## 7. Publish
 
 - Optionally run `npm run build:badges` locally to preview the generated file
+- Optionally run `npm run report:badges` to inspect provider usage and project counts
 - Push to `main`
 - Wait for `Publish Footer Badges` to finish
 - Confirm `badges.json` is reachable from GitHub Pages

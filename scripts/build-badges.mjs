@@ -3,7 +3,9 @@ import path from 'node:path';
 import process from 'node:process';
 
 const providersPath = path.join(process.cwd(), 'data', 'badge-providers.json');
+const badgeSetsPath = path.join(process.cwd(), 'data', 'badge-sets.json');
 const projectsPath = path.join(process.cwd(), 'data', 'site-projects.json');
+const projectsDirPath = path.join(process.cwd(), 'data', 'projects');
 const outputPath = path.join(process.cwd(), 'badges.json');
 
 function replacePlaceholders(value, variables, context) {
@@ -190,6 +192,229 @@ async function readJson(filePath) {
   return JSON.parse(source);
 }
 
+async function readJsonIfExists(filePath, fallbackValue) {
+  try {
+    return await readJson(filePath);
+  } catch (error) {
+    if (error && error.code === 'ENOENT') {
+      return fallbackValue;
+    }
+
+    throw error;
+  }
+}
+
+async function loadBadgeSets(providers) {
+  const source = await readJsonIfExists(badgeSetsPath, { sets: {} });
+
+  if (
+    typeof source !== 'object' ||
+    source === null ||
+    typeof source.sets !== 'object' ||
+    source.sets === null
+  ) {
+    throw new Error('data/badge-sets.json must contain a sets object.');
+  }
+
+  const badgeSets = {};
+
+  for (const [setId, badgeRefs] of Object.entries(source.sets)) {
+    if (Array.isArray(badgeRefs)) {
+      badgeSets[setId] = badgeRefs;
+      continue;
+    }
+
+    if (
+      typeof badgeRefs === 'object' &&
+      badgeRefs !== null &&
+      badgeRefs.include === 'all-providers'
+    ) {
+      badgeSets[setId] = Object.keys(providers);
+      continue;
+    }
+
+    throw new Error(
+      `Badge set "${setId}" must be an array or { "include": "all-providers" }.`,
+    );
+  }
+
+  return badgeSets;
+}
+
+async function loadProjectFiles() {
+  let entries = [];
+
+  try {
+    entries = await fs.readdir(projectsDirPath, { withFileTypes: true });
+  } catch (error) {
+    if (error && error.code === 'ENOENT') {
+      return {};
+    }
+
+    throw error;
+  }
+
+  const projects = {};
+  const projectFiles = entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+    .sort((left, right) => left.name.localeCompare(right.name));
+
+  for (const entry of projectFiles) {
+    const filePath = path.join(projectsDirPath, entry.name);
+    const source = await readJson(filePath);
+    const fileProjectId = path.basename(entry.name, '.json');
+    const projectId = source.id ?? fileProjectId;
+
+    if (projectId !== fileProjectId) {
+      throw new Error(
+        `Project file "${entry.name}" must use id "${fileProjectId}" or omit id.`,
+      );
+    }
+
+    const { id: _id, ...config } = source;
+    projects[projectId] = config;
+  }
+
+  return projects;
+}
+
+function mergeProjectSources(legacyProjects, fileProjects) {
+  const projects = {};
+
+  for (const [projectId, config] of Object.entries(legacyProjects)) {
+    projects[projectId] = config;
+  }
+
+  for (const [projectId, config] of Object.entries(fileProjects)) {
+    if (Object.prototype.hasOwnProperty.call(projects, projectId)) {
+      throw new Error(`Project "${projectId}" is defined more than once.`);
+    }
+
+    projects[projectId] = config;
+  }
+
+  return projects;
+}
+
+function getProjectEntries(projects, projectOrder = []) {
+  const remainingProjectIds = new Set(Object.keys(projects));
+  const entries = [];
+
+  for (const projectId of projectOrder) {
+    if (!remainingProjectIds.has(projectId)) {
+      throw new Error(`projectOrder references unknown project "${projectId}".`);
+    }
+
+    entries.push([projectId, projects[projectId]]);
+    remainingProjectIds.delete(projectId);
+  }
+
+  for (const projectId of [...remainingProjectIds].sort()) {
+    entries.push([projectId, projects[projectId]]);
+  }
+
+  return entries;
+}
+
+function getBadgeProviderId(badgeRef) {
+  if (typeof badgeRef === 'string') {
+    return badgeRef;
+  }
+
+  if (
+    typeof badgeRef === 'object' &&
+    badgeRef !== null &&
+    typeof badgeRef.provider === 'string'
+  ) {
+    return badgeRef.provider;
+  }
+
+  return null;
+}
+
+function mergeBadgeRefOverride(badgeRef, override) {
+  if (typeof override !== 'object' || override === null) {
+    throw new Error('Badge set overrides must be objects.');
+  }
+
+  if (typeof badgeRef === 'string') {
+    return {
+      provider: badgeRef,
+      override,
+    };
+  }
+
+  return {
+    ...badgeRef,
+    override: {
+      ...(badgeRef.override ?? {}),
+      ...override,
+    },
+  };
+}
+
+function expandBadgeReferences(projectId, badgeRefs, badgeSets, stack = []) {
+  const expanded = [];
+
+  for (const badgeRef of badgeRefs) {
+    if (
+      typeof badgeRef === 'object' &&
+      badgeRef !== null &&
+      typeof badgeRef.set === 'string'
+    ) {
+      const setId = badgeRef.set;
+
+      if (stack.includes(setId)) {
+        throw new Error(
+          `Project "${projectId}" contains a circular badge set reference: ${[
+            ...stack,
+            setId,
+          ].join(' -> ')}.`,
+        );
+      }
+
+      const setBadgeRefs = badgeSets[setId];
+      if (!Array.isArray(setBadgeRefs)) {
+        throw new Error(`Project "${projectId}" references unknown badge set "${setId}".`);
+      }
+
+      const overrideMap = badgeRef.overrides ?? {};
+      if (
+        typeof overrideMap !== 'object' ||
+        overrideMap === null ||
+        Array.isArray(overrideMap)
+      ) {
+        throw new Error(
+          `Project "${projectId}" badge set "${setId}" overrides must be an object.`,
+        );
+      }
+
+      const expandedSetRefs = expandBadgeReferences(projectId, setBadgeRefs, badgeSets, [
+        ...stack,
+        setId,
+      ]);
+
+      for (const setBadgeRef of expandedSetRefs) {
+        const providerId = getBadgeProviderId(setBadgeRef);
+        const override =
+          providerId && Object.prototype.hasOwnProperty.call(overrideMap, providerId)
+            ? overrideMap[providerId]
+            : null;
+
+        expanded.push(
+          override ? mergeBadgeRefOverride(setBadgeRef, override) : setBadgeRef,
+        );
+      }
+
+      continue;
+    }
+
+    expanded.push(badgeRef);
+  }
+
+  return expanded;
+}
+
 async function main() {
   const providersSource = await readJson(providersPath);
   const projectsSource = await readJson(projectsPath);
@@ -203,13 +428,11 @@ async function main() {
     throw new Error('data/badge-providers.json must contain a providers object.');
   }
 
-  if (
-    typeof projectsSource !== 'object' ||
-    projectsSource === null ||
-    typeof projectsSource.projects !== 'object' ||
-    projectsSource.projects === null
-  ) {
-    throw new Error('data/site-projects.json must contain a projects object.');
+  const badgeSets = await loadBadgeSets(providersSource.providers);
+  const fileProjects = await loadProjectFiles();
+
+  if (typeof projectsSource !== 'object' || projectsSource === null) {
+    throw new Error('data/site-projects.json must contain an object.');
   }
 
   const providers = providersSource.providers;
@@ -217,11 +440,23 @@ async function main() {
     typeof projectsSource.global === 'object' && projectsSource.global !== null
       ? projectsSource.global
       : {};
-  const projects = projectsSource.projects;
+  const legacyProjects =
+    typeof projectsSource.projects === 'object' && projectsSource.projects !== null
+      ? projectsSource.projects
+      : {};
+  const projects = mergeProjectSources(legacyProjects, fileProjects);
+  const projectEntries = getProjectEntries(
+    projects,
+    Array.isArray(projectsSource.projectOrder) ? projectsSource.projectOrder : [],
+  );
   const generatedProjects = {};
   const generatedProjectMeta = {};
 
-  for (const [projectId, config] of Object.entries(projects)) {
+  if (projectEntries.length === 0) {
+    throw new Error('No project configs found in data/site-projects.json or data/projects/.');
+  }
+
+  for (const [projectId, config] of projectEntries) {
     if (
       typeof config !== 'object' ||
       config === null ||
@@ -236,9 +471,11 @@ async function main() {
       ...(config.variables ?? {}),
     };
 
-    generatedProjects[projectId] = config.badges.map((badgeRef) =>
-      resolveBadgeConfig(projectId, badgeRef, providers, variables),
-    );
+    generatedProjects[projectId] = expandBadgeReferences(
+      projectId,
+      config.badges,
+      badgeSets,
+    ).map((badgeRef) => resolveBadgeConfig(projectId, badgeRef, providers, variables));
 
     const projectFooter = resolveProjectFooter(config, globalConfig, variables);
     if (projectFooter) {

@@ -1,0 +1,39 @@
+{
+  "id": "googlies",
+  "variables": {
+    "siteName": "googlies",
+    "siteSlug": "googlies",
+    "listingSlug": "googlies",
+    "domain": "googlies.online",
+    "domainRankDomain": "googlies.online",
+    "verifiedDrSlug": "googlies-online",
+    "startupFameSlug": "googlies-online",
+    "siteUrlEncoded": "https%3A%2F%2Fgooglies.online%2F",
+    "aidirsSlug": "googlies",
+    "huntifyAiSlug": "googlies",
+    "aiAgentsDirectorySlug": "googlies",
+    "aiAgentsDirectoryAlt": "Googlies - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "alt": "googlies.online on Verified DR",
+          "label": "googlies.online on Verified DR",
+          "src": null,
+          "target": "_blank",
+          "width": null,
+          "height": null
+        },
+        "startup-fame": {
+          "alt": "googlies.online - Featured on Startup Fame",
+          "label": "googlies.online - Featured on Startup Fame",
+          "src": null,
+          "width": null,
+          "height": null
+        }
+      }
+    }
+  ]
+}

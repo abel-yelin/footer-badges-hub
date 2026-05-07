@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build:badges": "node scripts/build-badges.mjs",
+    "report:badges": "node scripts/report-badges.mjs",
     "check": "node scripts/build-badges.mjs && node scripts/notify-sites.mjs"
   }
 }

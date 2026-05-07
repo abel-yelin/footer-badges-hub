@@ -48,6 +48,8 @@ scaffolds/footer-badges-hub
 复制后的仓库根目录里应至少包含这些文件：
 
 - `data/badge-providers.json`
+- `data/badge-sets.json`
+- `data/projects/`
 - `data/site-projects.json`
 - `badges.json`
 - `site-targets.json`
@@ -104,7 +106,9 @@ FOOTER_BADGES_CONFIG_URL
 编辑中心仓库里的：
 
 - `data/badge-providers.json`
+- `data/badge-sets.json`
 - `data/site-projects.json`
+- `data/projects/<project-id>.json`
 
 ### `badge-providers.json` 作用
 
@@ -126,12 +130,29 @@ FOOTER_BADGES_CONFIG_URL
 }
 ```
 
+### `badge-sets.json` 作用
+
+- 维护可复用的 badge 顺序列表
+- 多个网站共用同一套 badge 时，只需要引用同一个 set
+- 公共 badge 增删改时，只改一个地方
+
+示例：
+
+```json
+{
+  "sets": {
+    "all-providers": {
+      "include": "all-providers"
+    }
+  }
+}
+```
+
 ### `site-projects.json` 作用
 
-- 维护每个网站的变量
-- 决定该网站启用哪些 badge 平台
-- 统一维护全站共用的 footer 文案（如版权）
-- 最终由脚本自动生成单一 `badges.json`
+- 维护全局 footer 文案（如版权）
+- 维护 `projectOrder`，保证生成后的项目顺序稳定
+- 不再把所有网站变量堆在一个大文件里
 
 示例：
 
@@ -142,23 +163,40 @@ FOOTER_BADGES_CONFIG_URL
       "copyrightTemplate": "© {currentYear} {domain}"
     }
   },
-  "projects": {
-    "stampmaker": {
-      "variables": {
-        "siteSlug": "stampmaker",
-        "listingSlug": "stamp-maker",
-        "domain": "www.stampmaker.io"
-      },
-      "badges": ["findly", "turbo0"]
+  "projectOrder": ["stampmaker", "pdftourl"]
+}
+```
+
+### `data/projects/<project-id>.json` 作用
+
+- 维护单个网站的变量
+- 决定该网站启用哪些 badge set 或单个 badge provider
+- 用 `overrides` 处理某个网站的特殊 alt、label、src、target、width、height
+
+示例：
+
+```json
+{
+  "id": "stampmaker",
+  "variables": {
+    "siteSlug": "stampmaker",
+    "listingSlug": "stamp-maker",
+    "domain": "www.stampmaker.io"
+  },
+  "badges": [
+    {
+      "set": "all-providers"
     }
-  }
+  ]
 }
 ```
 
 ### 最终维护原则
 
 - badge 平台规则写在 `data/badge-providers.json`
-- 网站变量写在 `data/site-projects.json`
+- 公共 badge 顺序写在 `data/badge-sets.json`
+- 全局配置和项目顺序写在 `data/site-projects.json`
+- 网站变量写在 `data/projects/<project-id>.json`
 - 不再手工维护完整 `badges.json`
 - `badges.json` 由脚本自动生成
 
@@ -169,6 +207,14 @@ npm run build:badges
 ```
 
 执行后会自动生成新的 `badges.json`。
+
+### 本地维护报表
+
+```txt
+npm run report:badges
+```
+
+执行后可以看到 provider 数量、badge set 数量、每个项目的 badge 数量、未被使用的 provider、以及通知目标数量。
 
 ---
 
@@ -181,8 +227,10 @@ npm run build:badges
 当前你已经有这些站点：
 
 - `https://www.stampmaker.io/api/revalidate-footer-badges`
+- `https://www.pdftourl.net/api/revalidate-footer-badges`
 - `https://www.mp3tourl.com/api/revalidate-footer-badges`
 - `https://www.videotourl.com/api/revalidate-footer-badges`
+- `https://googlies.online/api/revalidate-footer-badges`
 
 ### 当前配置含义
 
@@ -251,6 +299,15 @@ FOOTER_BADGES_REVALIDATE_TOKEN="your-stampmaker-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ```
 
+### pdftourl.net
+
+```env
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_PROJECT_ID="pdftourl"
+FOOTER_BADGES_REVALIDATE_TOKEN="your-pdftourl-token"
+FOOTER_BADGES_REVALIDATE_SECONDS="3600"
+```
+
 ### mp3tourl.com
 
 ```env
@@ -266,6 +323,15 @@ FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
 FOOTER_BADGES_PROJECT_ID="videotourl"
 FOOTER_BADGES_REVALIDATE_TOKEN="your-videotourl-token"
+FOOTER_BADGES_REVALIDATE_SECONDS="3600"
+```
+
+### googlies.online
+
+```env
+FOOTER_BADGES_CONFIG_URL="https://abel-yelin.github.io/footer-badges-hub/badges.json"
+FOOTER_BADGES_PROJECT_ID="googlies"
+FOOTER_BADGES_REVALIDATE_TOKEN="your-googlies-token"
 FOOTER_BADGES_REVALIDATE_SECONDS="3600"
 ```
 
@@ -294,7 +360,9 @@ POST /api/revalidate-footer-badges
 当你完成了：
 
 - `data/badge-providers.json`
+- `data/badge-sets.json`
 - `data/site-projects.json`
+- `data/projects/`
 - `site-targets.json`
 - `SITE_REVALIDATE_TOKENS_JSON`
 - 各网站环境变量
@@ -338,8 +406,10 @@ https://abel-yelin.github.io/footer-badges-hub/badges.json
 
 ```txt
 OK stampmaker
+OK pdftourl
 OK mp3tourl
 OK videotourl
+OK googlies
 ```
 
 ### 3. 验证网站页面是否刷新
@@ -347,8 +417,10 @@ OK videotourl
 分别打开：
 
 - `https://www.stampmaker.io`
+- `https://www.pdftourl.net`
 - `https://www.mp3tourl.com`
 - `https://www.videotourl.com`
+- `https://googlies.online`
 
 查看 footer badge 是否更新。
 
@@ -358,7 +430,7 @@ OK videotourl
 
 以后你只需要做这几步：
 
-1. 修改中心仓库 `data/badge-providers.json` 或 `data/site-projects.json`
+1. 修改中心仓库 `data/badge-providers.json`、`data/badge-sets.json`、`data/site-projects.json` 或 `data/projects/<project-id>.json`
 2. 提交并 push 到 `main`
 3. 等 GitHub Action 自动完成
 4. 检查各站点 footer 是否更新
@@ -375,7 +447,7 @@ OK videotourl
 
 按下面顺序检查：
 
-1. 中心仓库的 `data/site-projects.json` 是否已经包含该项目键
+1. 中心仓库的 `data/projects/<project-id>.json` 是否存在，且 `data/site-projects.json` 的 `projectOrder` 是否需要追加该项目
 2. 该网站的 `FOOTER_BADGES_PROJECT_ID` 是否正确
 3. 该网站的 `FOOTER_BADGES_CONFIG_URL` 是否正确
 4. 中心仓库的 `site-targets.json` 是否包含该网站
@@ -393,10 +465,10 @@ OK videotourl
 2. 把 `scaffolds/footer-badges-hub` 里的内容复制进去
 3. 启用 GitHub Pages
 4. 配置 `SITE_REVALIDATE_TOKENS_JSON`
-5. 给 `stampmaker` / `mp3tourl` / `videotourl` 三个网站配置环境变量
+5. 给所有消费站点配置环境变量
 6. push 中心仓库到 `main`
 7. 检查 Pages 和 Action 结果
-8. 验证三个站点 footer 是否更新
+8. 验证所有站点 footer 是否更新
 
 ---
 
@@ -406,13 +478,17 @@ OK videotourl
 
 - 项目 key：
   - `stampmaker`
+  - `pdftourl`
   - `mp3tourl`
   - `videotourl`
+  - `googlies`
 
 - token key：
   - `stampmaker`
+  - `pdftourl`
   - `mp3tourl`
   - `videotourl`
+  - `googlies`
 
 这样配置最不容易出错。
 
@@ -426,12 +502,3 @@ OK videotourl
 2. 给 `videotourl.com` 接入同样的运行时 badge 系统
 3. 直接帮你生成中心仓库第一版可提交的完整文件内容
 4. 帮你写一份“GitHub 上怎么点按钮”的更细致图文步骤
-
-
-{
-  "stampmaker": "fbb_7c4e6f0d0b1245d1b0a8b6d7f3c9e24a_9d5f2a1c6e7b4d8f",
-  "mp3tourl": "fbb_2e9a4c7d1f6b45a8b3d0c9e5f1a2746c_8b6d3f2a9c1e4d7b",
-  "videotourl": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d",
-  "pdftourl": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d",
-  "googlies": "fbb_6d1b9e4c2f7a43d8b0c5e1a9f3d2647b_1c8e5a2d7f4b9c6d"
-}

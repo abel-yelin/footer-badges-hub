@@ -1,0 +1,22 @@
+{
+  "id": "stampmaker",
+  "variables": {
+    "siteName": "stampmaker",
+    "siteSlug": "stampmaker",
+    "listingSlug": "stamp-maker",
+    "domain": "www.stampmaker.io",
+    "domainRankDomain": "stampmaker.io",
+    "verifiedDrSlug": "stampmaker-io",
+    "startupFameSlug": "stampmaker.io-195",
+    "siteUrlEncoded": "https%3A%2F%2Fwww.stampmaker.io%2F",
+    "aidirsSlug": "stamp-maker",
+    "huntifyAiSlug": "stampmaker",
+    "aiAgentsDirectorySlug": "digital-stamp-maker",
+    "aiAgentsDirectoryAlt": "Digital Stamp Maker - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers"
+    }
+  ]
+}

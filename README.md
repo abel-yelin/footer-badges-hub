@@ -9,8 +9,11 @@ It publishes `badges.json` to GitHub Pages and can notify all subscribed sites
 ## Files
 
 - `data/badge-providers.json`: reusable badge provider templates
-- `data/site-projects.json`: per-site variables, enabled provider list, and global footer text
+- `data/badge-sets.json`: shared ordered badge sets reused by projects
+- `data/site-projects.json`: global footer text and project output order
+- `data/projects/*.json`: per-site variables, enabled badge sets/providers, and overrides
 - `scripts/build-badges.mjs`: generates the final `badges.json`
+- `scripts/report-badges.mjs`: prints a local maintenance report
 - `badges.json`: generated output consumed by all sites
 - `site-targets.json`: the list of sites to notify after config changes
 - `scripts/notify-sites.mjs`: posts revalidate requests to all configured sites
@@ -59,7 +62,7 @@ Authorization: Bearer <FOOTER_BADGES_REVALIDATE_TOKEN>
 
 ## Update flow
 
-1. Edit `data/badge-providers.json` or `data/site-projects.json` (for example `global.footer.copyrightTemplate`)
+1. Edit `data/badge-providers.json`, `data/badge-sets.json`, `data/site-projects.json`, or a file under `data/projects/`
 2. Run `npm run build:badges` if you want to preview the generated output locally
 3. Push to `main`
 4. GitHub Actions regenerates `badges.json`
@@ -69,3 +72,12 @@ Authorization: Bearer <FOOTER_BADGES_REVALIDATE_TOKEN>
 
 Without notification, sites still update automatically after their configured
 runtime cache TTL expires.
+
+## Maintenance workflow
+
+- Add a new badge platform in `data/badge-providers.json`.
+- Use `{ "include": "all-providers" }` in `data/badge-sets.json` when every provider should be enabled for all projects.
+- Add a reusable badge sequence in `data/badge-sets.json` when only some sites share the same list.
+- Add one project file under `data/projects/<project-id>.json` for each site.
+- Use `overrides` inside a project badge set when one site needs different alt text, label, image, target, width, or height.
+- Run `npm run report:badges` to see project badge counts, unused providers, and enabled revalidate targets.
