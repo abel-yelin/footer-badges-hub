@@ -183,6 +183,7 @@ FOOTER_BADGES_CONFIG_URL
 ### `data/projects/<project-id>.json` 作用
 
 - 维护单个网站的变量
+- 维护单个网站的 footer 文案；当前项目统一显式写 `© {currentYear} Googlies Media`
 - 决定该网站启用哪些 badge set 或单个 badge provider
 - 用 `overrides` 处理某个网站的特殊 alt、label、src、target、width、height
 
@@ -190,15 +191,32 @@ FOOTER_BADGES_CONFIG_URL
 
 ```json
 {
-  "id": "stampmaker",
+  "id": "mp3tourl",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
   "variables": {
-    "siteSlug": "stampmaker",
-    "listingSlug": "stamp-maker",
-    "domain": "www.stampmaker.io"
+    "siteName": "mp3tourl",
+    "siteSlug": "mp3tourl",
+    "listingSlug": "mp3tourl",
+    "domain": "www.mp3tourl.com",
+    "domainRankDomain": "mp3tourl.com",
+    "verifiedDrSlug": "mp3tourl-com",
+    "startupFameSlug": "mp3tourl",
+    "siteUrlEncoded": "https%3A%2F%2Fwww.mp3tourl.com%2F",
+    "aidirsSlug": "mp3tourl",
+    "huntifyAiSlug": "mp3tourl",
+    "aiAgentsDirectorySlug": "mp3-to-url",
+    "aiAgentsDirectoryAlt": "MP3 to URL - Featured AI Agent on AI Agents Directory"
   },
   "badges": [
     {
-      "set": "all-providers"
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
     }
   ]
 }
@@ -209,7 +227,7 @@ FOOTER_BADGES_CONFIG_URL
 - badge 平台规则写在 `data/badge-providers.json`
 - 公共 badge 顺序写在 `data/badge-sets.json`
 - 全局配置和项目顺序写在 `data/site-projects.json`
-- 网站变量写在 `data/projects/<project-id>.json`
+- 网站变量、站点 footer 文案、站点级 badge 特殊处理都写在 `data/projects/<project-id>.json`
 - 不再手工维护完整 `badges.json`
 - `badges.json` 和 `dist/projects/*.json` 都由脚本自动生成
 
