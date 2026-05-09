@@ -35,6 +35,12 @@
       "enabled": true,
       "revalidateUrl": "https://f3dprint.com/api/revalidate-footer-badges",
       "tokenKey": "f3dprint"
+    },
+    {
+      "name": "locfox",
+      "enabled": true,
+      "revalidateUrl": "https://locfox.com/api/revalidate-footer-badges",
+      "tokenKey": "locfox"
     }
   ]
 }

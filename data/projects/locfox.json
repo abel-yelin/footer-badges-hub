@@ -1,0 +1,30 @@
+{
+  "id": "locfox",
+  "footer": {
+    "copyright": "© {currentYear} locfox.com"
+  },
+  "variables": {
+    "siteName": "locfox",
+    "siteSlug": "locfox",
+    "listingSlug": "locfox",
+    "domain": "locfox.com",
+    "domainRankDomain": "locfox.com",
+    "verifiedDrSlug": "locfox-com",
+    "startupFameSlug": "locfox",
+    "siteUrlEncoded": "https%3A%2F%2Flocfox.com%2F",
+    "aidirsSlug": "locfox",
+    "huntifyAiSlug": "locfox",
+    "aiAgentsDirectorySlug": "locfox",
+    "aiAgentsDirectoryAlt": "LocFox - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
+    }
+  ]
+}
