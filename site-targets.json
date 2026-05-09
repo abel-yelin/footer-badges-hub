@@ -29,6 +29,12 @@
       "enabled": true,
       "revalidateUrl": "https://googlies.online/api/revalidate-footer-badges",
       "tokenKey": "googlies"
+    },
+    {
+      "name": "f3dprint",
+      "enabled": true,
+      "revalidateUrl": "https://f3dprint.com/api/revalidate-footer-badges",
+      "tokenKey": "f3dprint"
     }
   ]
 }

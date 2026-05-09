@@ -1,0 +1,30 @@
+{
+  "id": "f3dprint",
+  "footer": {
+    "copyright": "© {currentYear} Googlies Media"
+  },
+  "variables": {
+    "siteName": "f3dprint",
+    "siteSlug": "f3dprint",
+    "listingSlug": "f3dprint",
+    "domain": "f3dprint.com",
+    "domainRankDomain": "f3dprint.com",
+    "verifiedDrSlug": "f3dprint-com",
+    "startupFameSlug": "f3dprint",
+    "siteUrlEncoded": "https%3A%2F%2Ff3dprint.com%2F",
+    "aidirsSlug": "f3dprint",
+    "huntifyAiSlug": "f3dprint",
+    "aiAgentsDirectorySlug": "f3dprint",
+    "aiAgentsDirectoryAlt": "F3DPrint - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
+    }
+  ]
+}
