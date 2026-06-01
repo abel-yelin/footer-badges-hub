@@ -235,6 +235,14 @@
       "src": "https://www.image2url.com/badges/featured-light.svg",
       "target": "_blank",
       "width": 150
+    },
+    "wired-business": {
+      "hrefTemplate": "https://wired.business",
+      "alt": "Featured on Wired Business",
+      "src": "https://wired.business/badge0-white.svg",
+      "target": "_blank",
+      "width": 200,
+      "height": 54
     }
   }
 }

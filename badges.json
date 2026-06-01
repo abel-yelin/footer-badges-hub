@@ -237,6 +237,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "pdftourl": [
@@ -475,6 +483,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "mp3tourl": [
@@ -713,6 +729,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "videotourl": [
@@ -951,6 +975,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "googlies": [
@@ -1185,6 +1217,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "f3dprint": [
@@ -1423,6 +1463,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "locfox": [
@@ -1661,6 +1709,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ],
     "redactfile": [
@@ -1899,6 +1955,14 @@
         "src": "https://www.image2url.com/badges/featured-light.svg",
         "target": "_blank",
         "width": 150
+      },
+      {
+        "href": "https://wired.business",
+        "alt": "Featured on Wired Business",
+        "src": "https://wired.business/badge0-white.svg",
+        "target": "_blank",
+        "width": 200,
+        "height": 54
       }
     ]
   },
