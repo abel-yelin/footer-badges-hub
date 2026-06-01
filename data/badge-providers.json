@@ -243,6 +243,14 @@
       "target": "_blank",
       "width": 200,
       "height": 54
+    },
+    "frogdr": {
+      "hrefTemplate": "https://frogdr.com/{domain}?utm_source={domain}",
+      "alt": "Monitor your Domain Rating with FrogDR",
+      "srcTemplate": "https://frogdr.com/{domain}/badge-white.svg",
+      "target": "_blank",
+      "width": 250,
+      "height": 54
     }
   }
 }
