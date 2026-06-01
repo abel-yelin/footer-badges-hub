@@ -743,10 +743,12 @@
         "label": "Listed on AIBestTop"
       },
       {
-        "href": "https://verifieddr.com/website/www-videotourl-com",
-        "alt": "videotourl on Verified DR",
-        "label": "videotourl on Verified DR",
-        "target": "_blank"
+        "href": "https://verifieddr.com/website/videotourl-com",
+        "alt": "Verified DR - Verified Domain Rating for www.videotourl.com",
+        "src": "https://verifieddr.com/badge/videotourl-com.svg",
+        "target": "_blank",
+        "width": 220,
+        "height": 68
       },
       {
         "href": "https://domainrank.app",

@@ -9,7 +9,7 @@
     "listingSlug": "videotourl",
     "domain": "www.videotourl.com",
     "domainRankDomain": "videotourl.com",
-    "verifiedDrSlug": "www-videotourl-com",
+    "verifiedDrSlug": "videotourl-com",
     "startupFameSlug": "videotourl",
     "siteUrlEncoded": "https%3A%2F%2Fwww.videotourl.com%2F",
     "aidirsSlug": "videotourl",
@@ -22,12 +22,7 @@
       "set": "all-providers",
       "overrides": {
         "verifieddr": {
-          "alt": "videotourl on Verified DR",
-          "label": "videotourl on Verified DR",
-          "src": null,
-          "target": "_blank",
-          "width": null,
-          "height": null
+          "target": "_blank"
         }
       }
     }
