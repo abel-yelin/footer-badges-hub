@@ -41,6 +41,12 @@
       "enabled": true,
       "revalidateUrl": "https://locfox.com/api/revalidate-footer-badges",
       "tokenKey": "locfox"
+    },
+    {
+      "name": "redactfile",
+      "enabled": true,
+      "revalidateUrl": "https://redactfile.com/api/revalidate-footer-badges",
+      "tokenKey": "redactfile"
     }
   ]
 }

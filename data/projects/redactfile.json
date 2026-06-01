@@ -1,0 +1,30 @@
+{
+  "id": "redactfile",
+  "footer": {
+    "copyright": "© {currentYear} redactfile.com"
+  },
+  "variables": {
+    "siteName": "redactfile",
+    "siteSlug": "redactfile",
+    "listingSlug": "redactfile",
+    "domain": "redactfile.com",
+    "domainRankDomain": "redactfile.com",
+    "verifiedDrSlug": "redactfile-com",
+    "startupFameSlug": "redactfile",
+    "siteUrlEncoded": "https%3A%2F%2Fredactfile.com%2F",
+    "aidirsSlug": "redactfile",
+    "huntifyAiSlug": "redactfile",
+    "aiAgentsDirectorySlug": "redactfile",
+    "aiAgentsDirectoryAlt": "RedactFile - Featured AI Agent on AI Agents Directory"
+  },
+  "badges": [
+    {
+      "set": "all-providers",
+      "overrides": {
+        "verifieddr": {
+          "target": "_blank"
+        }
+      }
+    }
+  ]
+}
